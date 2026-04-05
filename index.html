@@ -27,7 +27,7 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:28px 40px;
+padding:22px 40px;
 }
 background:rgba(0,0,0,0.4);
 backdrop-filter:blur(8px);
@@ -35,9 +35,10 @@ border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
 .brand-logo{
-height:110px;
+height:85px;
 width:auto;
 display:block;
+max-width:420px;
 }
 
 nav a{
@@ -184,7 +185,7 @@ font-size:14px;
 <header>
 
 <a href="/">
-<img src="logo.png" class="brand-logo">
+<img src="logo.png" class="brand-logo header-logo">
 </a>
 
 <nav>
@@ -198,7 +199,9 @@ font-size:14px;
 
 <section class="hero">
 
-<h1>Lucky<span>Bonus</span></h1>
+<div class="hero-logo">
+<img src="logo.png" alt="LuckyBonus">
+</div>
 
 <p>Find the Best Casino Bonuses in Seconds</p>
 
