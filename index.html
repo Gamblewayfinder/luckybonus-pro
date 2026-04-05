@@ -3,512 +3,479 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LuckyBonus — Best Casino Bonuses</title>
-  <meta name="description" content="LuckyBonus compares top online casino bonuses, free spins and welcome offers in a premium affiliate-style layout.">
+  <title>LuckyBonus.pro — Best Casino Bonuses 2026</title>
+  <meta name="description" content="Find the best online casino bonuses in seconds. Expert-reviewed rankings, exclusive welcome offers and free spins.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      font-family:Arial, sans-serif;
-      color:#ffffff;
+    body {
+      font-family: 'Nunito', Arial, sans-serif;
+      color: #ffffff;
+      min-height: 100vh;
+      overflow-x: hidden;
       background:
-        radial-gradient(circle at 18% 10%, rgba(255,180,70,0.16), transparent 16%),
-        radial-gradient(circle at 82% 16%, rgba(255,150,60,0.10), transparent 18%),
-        radial-gradient(circle at 50% 70%, rgba(255,210,90,0.08), transparent 20%),
-        linear-gradient(180deg, #12051d 0%, #140022 42%, #1a0128 100%);
-      min-height:100vh;
-      overflow-x:hidden;
+        radial-gradient(ellipse at 20% 10%, rgba(255,180,60,0.13) 0%, transparent 40%),
+        radial-gradient(ellipse at 80% 15%, rgba(255,140,40,0.09) 0%, transparent 35%),
+        radial-gradient(ellipse at 50% 80%, rgba(180,80,255,0.07) 0%, transparent 40%),
+        linear-gradient(180deg, #0e0418 0%, #130520 40%, #1a0630 100%);
     }
 
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
+    /* ── Starfield ── */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
       background-image:
-        radial-gradient(circle, rgba(255,230,160,0.55) 0 1px, transparent 1.5px),
-        radial-gradient(circle, rgba(255,210,120,0.30) 0 1px, transparent 1.5px);
-      background-size:190px 190px, 260px 260px;
-      background-position:0 0, 60px 90px;
-      opacity:0.22;
-      z-index:0;
+        radial-gradient(circle, rgba(255,235,170,0.65) 0 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,210,120,0.35) 0 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.20) 0 1px, transparent 1.5px);
+      background-size: 170px 170px, 250px 250px, 310px 310px;
+      background-position: 0 0, 55px 80px, 120px 40px;
+      opacity: 0.28;
     }
 
-    a{
-      text-decoration:none;
+    a { text-decoration: none; color: inherit; }
+
+    .wrap {
+      width: min(520px, calc(100% - 24px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
 
-    .container{
-      width:min(1120px, calc(100% - 36px));
-      margin:0 auto;
-      position:relative;
-      z-index:1;
+    /* ── Hero ── */
+    .hero {
+      padding: 28px 0 0;
+      text-align: center;
     }
 
-    header{
-      padding:20px 0 10px;
+    .hero-img {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 0 32px rgba(255,200,60,0.22));
     }
 
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-      padding:16px 24px;
-      border-radius:24px;
-      background:rgba(8,5,22,0.72);
-      border:1px solid rgba(255,220,140,0.08);
-      box-shadow:0 12px 40px rgba(0,0,0,0.22);
-      backdrop-filter:blur(8px);
+    /* ── CTA Button ── */
+    .cta-wrap {
+      padding: 22px 0 26px;
+      text-align: center;
     }
 
-    .brand-link{
-      display:inline-flex;
-      align-items:center;
-      min-width:0;
-    }
-
-    .brand-logo{
-      height:64px;
-      width:auto;
-      display:block;
-      object-fit:contain;
-    }
-
-    .nav-links{
-      display:flex;
-      gap:28px;
-      flex-wrap:wrap;
-    }
-
-    .nav-links a{
-      color:#ececf6;
-      font-weight:700;
-      font-size:15px;
-      opacity:0.9;
-    }
-
-    .nav-links a:hover{
-      opacity:1;
-    }
-
-    .hero{
-      text-align:center;
-      padding:42px 0 26px;
-    }
-
-    .hero-logo{
-      margin:0 auto 14px;
-      max-width:760px;
-    }
-
-    .hero-logo img{
-      width:min(700px, 100%);
-      height:auto;
-      display:block;
-      margin:0 auto;
-      object-fit:contain;
-      filter:drop-shadow(0 0 18px rgba(255,205,90,0.16));
-    }
-
-    .tagline{
-      margin:10px 0 0;
-      font-size:22px;
-      color:#f4f5fb;
-      text-shadow:0 0 10px rgba(255,230,150,0.06);
-    }
-
-    .hero-cta-wrap{
-      padding:28px 0 34px;
-    }
-
-    .hero-cta{
-      display:inline-block;
-      padding:22px 52px;
-      border-radius:16px;
-      font-size:26px;
-      font-weight:900;
-      color:#181305;
-      background:linear-gradient(180deg, #dcff33 0%, #bde51d 48%, #9fd10f 100%);
-      border:2px solid rgba(255,247,160,0.18);
+    .cta-btn {
+      display: inline-block;
+      padding: 18px 56px;
+      border-radius: 14px;
+      font-size: 22px;
+      font-weight: 900;
+      color: #0f1a00;
+      background: linear-gradient(180deg, #c8f020 0%, #a8d400 50%, #88b000 100%);
+      border: 2px solid rgba(255,255,180,0.25);
       box-shadow:
-        0 8px 0 rgba(88,116,15,0.42),
-        0 18px 34px rgba(200,255,70,0.16),
-        0 0 24px rgba(220,255,90,0.18);
+        0 6px 0 rgba(60,90,0,0.45),
+        0 14px 32px rgba(160,220,0,0.20),
+        0 0 20px rgba(180,240,0,0.15);
+      letter-spacing: 0.02em;
+      transition: transform 0.15s, box-shadow 0.15s;
     }
 
-    .offers-panel{
-      border-radius:28px;
-      padding:28px 18px 18px;
-      border:1px solid rgba(255,210,120,0.16);
-      background:linear-gradient(180deg, rgba(36,17,56,0.76), rgba(25,10,42,0.88));
+    .cta-btn:hover {
+      transform: translateY(-2px);
       box-shadow:
-        0 0 0 1px rgba(255,220,150,0.03) inset,
-        0 20px 60px rgba(0,0,0,0.24),
-        0 0 28px rgba(255,185,80,0.06);
-      backdrop-filter:blur(3px);
+        0 8px 0 rgba(60,90,0,0.45),
+        0 18px 36px rgba(160,220,0,0.28),
+        0 0 28px rgba(180,240,0,0.22);
     }
 
-    .panel-title{
-      text-align:center;
-      margin:0 0 18px;
-      font-size:34px;
-      font-weight:900;
-      color:#f2d07b;
-      position:relative;
-      text-shadow:0 0 10px rgba(255,210,120,0.12);
+    .cta-btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 3px 0 rgba(60,90,0,0.45);
+    }
+
+    /* ── Offers Panel ── */
+    .panel {
+      border-radius: 24px;
+      padding: 24px 16px 18px;
+      background: linear-gradient(180deg, rgba(32,14,58,0.82) 0%, rgba(20,8,40,0.92) 100%);
+      border: 1px solid rgba(255,210,120,0.18);
+      box-shadow:
+        0 0 0 1px rgba(255,220,150,0.04) inset,
+        0 20px 60px rgba(0,0,0,0.30),
+        0 0 40px rgba(255,180,60,0.07);
+    }
+
+    .panel-title {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 900;
+      color: #f0cc6e;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
     }
 
     .panel-title::before,
-    .panel-title::after{
-      content:"";
-      display:inline-block;
-      width:90px;
-      height:2px;
-      vertical-align:middle;
-      margin:0 16px;
-      background:linear-gradient(90deg, transparent, rgba(242,208,123,0.95), transparent);
+    .panel-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(240,204,110,0.7), transparent);
+      max-width: 80px;
     }
 
-    .offer-card{
-      display:grid;
-      grid-template-columns:150px 1fr 180px;
-      gap:22px;
-      align-items:center;
-      padding:18px;
-      margin-bottom:16px;
-      border-radius:22px;
-      background:rgba(23,10,39,0.76);
-      border:1px solid rgba(255,220,140,0.08);
-      box-shadow:0 10px 28px rgba(0,0,0,0.18);
+    /* ── Casino Card ── */
+    .card {
+      display: grid;
+      grid-template-columns: 110px 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding: 14px 14px 14px 14px;
+      margin-bottom: 12px;
+      border-radius: 18px;
+      background: rgba(18,8,34,0.80);
+      border: 1px solid rgba(255,215,120,0.10);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
 
-    .brand-box{
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      align-items:flex-start;
+    .card:last-child { margin-bottom: 0; }
+
+    .card:hover {
+      border-color: rgba(255,215,120,0.28);
+      box-shadow: 0 10px 32px rgba(0,0,0,0.30), 0 0 16px rgba(255,200,80,0.08);
     }
 
-    .brand-logo-box{
-      width:132px;
-      height:86px;
-      border-radius:14px;
-      background:linear-gradient(180deg, rgba(12,10,24,0.95), rgba(26,14,44,0.95));
-      border:1px solid rgba(255,210,120,0.08);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:10px;
-      color:#f1ce73;
-      font-weight:900;
-      font-size:17px;
-      line-height:1.05;
-      box-shadow:inset 0 0 18px rgba(255,200,100,0.03);
+    /* Logo box */
+    .logo-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
     }
 
-    .score-badge{
-      min-width:96px;
-      padding:10px 12px;
-      border-radius:12px;
-      background:rgba(27,18,45,0.86);
-      border:1px solid rgba(255,215,120,0.06);
-      color:#fff;
-      font-size:17px;
-      font-weight:800;
-      text-align:center;
+    .logo-img-wrap {
+      width: 96px;
+      height: 64px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0d0820 0%, #1e1040 100%);
+      border: 1px solid rgba(255,210,120,0.10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
     }
 
-    .score-badge span{
-      color:#f2c44a;
-      margin-right:6px;
+    .logo-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 6px;
     }
 
-    .offer-main h3{
-      margin:0 0 8px;
-      font-size:28px;
-      line-height:1.1;
-      color:#ffffff;
+    .logo-text-fallback {
+      color: #f0c860;
+      font-weight: 900;
+      font-size: 13px;
+      text-align: center;
+      line-height: 1.15;
+      padding: 8px;
     }
 
-    .bonus-line{
-      margin:0 0 10px;
-      font-size:21px;
-      font-weight:900;
-      color:#f3c84c;
-      text-shadow:0 0 10px rgba(243,200,76,0.10);
+    .rating {
+      font-size: 15px;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
 
-    .offer-main p{
-      margin:0;
-      color:#dddff0;
-      font-size:15px;
+    .rating .star { color: #f5c518; font-size: 16px; }
+
+    /* Card info */
+    .card-info { min-width: 0; }
+
+    .card-name {
+      font-size: 18px;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .card-action{
-      text-align:right;
+    .card-bonus {
+      font-size: 15px;
+      font-weight: 800;
+      color: #f3c84c;
+      margin-bottom: 5px;
     }
 
-    .play-btn{
-      display:inline-block;
-      min-width:150px;
-      text-align:center;
-      padding:17px 18px;
-      border-radius:14px;
-      font-size:18px;
-      font-weight:900;
-      color:#181305;
-      background:linear-gradient(180deg, #dcff33 0%, #bde51d 48%, #9fd10f 100%);
-      border:2px solid rgba(255,247,160,0.16);
+    .card-desc {
+      font-size: 13px;
+      color: #c8cce0;
+      line-height: 1.4;
+    }
+
+    /* Action */
+    .card-action { text-align: right; flex-shrink: 0; }
+
+    .play-btn {
+      display: inline-block;
+      padding: 13px 18px;
+      min-width: 120px;
+      text-align: center;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 900;
+      color: #0f1a00;
+      background: linear-gradient(180deg, #c8f020 0%, #a8d400 50%, #88b000 100%);
+      border: 2px solid rgba(255,255,180,0.20);
       box-shadow:
-        0 7px 0 rgba(88,116,15,0.40),
-        0 14px 26px rgba(205,255,80,0.10);
+        0 5px 0 rgba(60,90,0,0.40),
+        0 10px 20px rgba(160,220,0,0.12);
+      transition: transform 0.15s, box-shadow 0.15s;
+      white-space: nowrap;
     }
 
-    .features{
-      padding:28px 0 14px;
+    .play-btn:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 7px 0 rgba(60,90,0,0.40),
+        0 14px 28px rgba(160,220,0,0.20);
     }
 
-    .feature-grid{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:18px;
+    .play-btn:active { transform: translateY(2px); }
+
+    /* ── Trust Features ── */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
     }
 
-    .feature{
-      border-radius:20px;
-      padding:22px;
-      background:rgba(23,14,41,0.74);
-      border:1px solid rgba(255,205,120,0.10);
-      box-shadow:0 10px 28px rgba(0,0,0,0.16);
+    .feat {
+      border-radius: 16px;
+      padding: 18px 14px;
+      background: rgba(20,10,38,0.78);
+      border: 1px solid rgba(255,205,120,0.10);
+      text-align: center;
     }
 
-    .feature-icon{
-      font-size:30px;
-      margin-bottom:10px;
-      color:#f2c64f;
+    .feat-icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+      display: block;
     }
 
-    .feature h4{
-      margin:0 0 8px;
-      font-size:18px;
-      color:#f1cd74;
+    .feat h4 {
+      font-size: 14px;
+      font-weight: 800;
+      color: #f0cc6e;
+      margin-bottom: 6px;
     }
 
-    .feature p{
-      margin:0;
-      color:#d8dcec;
-      font-size:15px;
+    .feat p {
+      font-size: 12px;
+      color: #c0c4da;
+      line-height: 1.45;
     }
 
-    .footer{
-      text-align:center;
-      padding:30px 0 42px;
-      color:#ececf7;
-      font-size:16px;
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 24px 0 36px;
+      font-size: 15px;
+      color: #e0e4f4;
     }
 
-    .footer span{
-      color:#f3c84c;
-      font-weight:800;
+    .footer strong { color: #f3c84c; }
+
+    .footer-note {
+      margin-top: 8px;
+      font-size: 11px;
+      color: #7a7e96;
+      line-height: 1.5;
     }
 
-    .footer-note{
-      margin-top:8px;
-      color:#bfc6da;
-      font-size:14px;
-      opacity:0.8;
-    }
-
-    @media (max-width: 980px){
-      .brand-logo{
-        height:52px;
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      .card {
+        grid-template-columns: 90px 1fr;
+        grid-template-rows: auto auto;
       }
 
-      .hero-logo img{
-        width:min(560px, 100%);
+      .logo-box {
+        grid-row: 1;
+        grid-column: 1;
       }
 
-      .offer-card{
-        grid-template-columns:1fr;
-        text-align:left;
+      .card-info {
+        grid-row: 1;
+        grid-column: 2;
       }
 
-      .brand-box{
-        align-items:flex-start;
+      .card-action {
+        grid-row: 2;
+        grid-column: 1 / -1;
+        text-align: center;
       }
 
-      .card-action{
-        text-align:left;
+      .play-btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
       }
 
-      .feature-grid{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media (max-width: 700px){
-      .nav{
-        flex-direction:column;
-        align-items:flex-start;
+      .logo-img-wrap {
+        width: 80px;
+        height: 54px;
       }
 
-      .nav-links{
-        gap:18px;
+      .features {
+        grid-template-columns: 1fr;
       }
 
-      .brand-logo{
-        height:44px;
-      }
-
-      .tagline{
-        font-size:18px;
-      }
-
-      .hero-cta{
-        font-size:22px;
-        padding:18px 30px;
-      }
-
-      .panel-title{
-        font-size:28px;
-      }
-
-      .panel-title::before,
-      .panel-title::after{
-        display:none;
+      .cta-btn {
+        font-size: 19px;
+        padding: 16px 36px;
       }
     }
   </style>
-</head>
+<script type='text/javascript' src='https://private-us-east-1.manuscdn.com/QxMz895Du6rt-sGhSxtnHchT2MFMuVL1eVlkHD14PxnOxWh0fiPI_f63M08aSibKYOFY-hNrG2moEU3U3SZyIhbZtBONlq8Be0PN4SNnQCj9mM9-ifMDNJV2c-WKl6fA_y-mMeR59v3HuABaTOzwfUQSh2ZA_qpN1ZbLx_aEyurKaPPwfxPE2xJaaLx-AXd-iI_iYdkub32-qba3FwqmDVaDWuRZsfW57xQhe-QpZCwTvGfh5ZEYGF8Rz3x1utTsGoTaaoqN2HycYW6OmxyRjlJT00J6zabosRDqO6U0oAfBNaurAs_zjYDXPIjyRA5_Da78C8R4LODn0EBjtW4-WX80ojLdGUiS3k_EOsyfOu-J_TzeW-76SRVLHaD9u5l8pznAs3o5Fc8sEOS8GWboWxtvkcGksCgBQznuJ-rC8O4Jh7Ct81ViKBmlMjmo9iR9uH97W6OWyMJuSsD3P6vNdD_pdrrmx4bnpU3DTN-7Rf9zqscS8k7xlVngQlxspb-YogJwkq1tecWxlREU_G4MbsHgbVX42AaBf9DY7mekTQ-_hWkDdP_aGUa_atjxaxHvO_FhobD8LPcW4wzxR9rCVgUPT_vbfVwbV1Bcx4HDL4EFz5YD0pS9rLF5WAWfNBZcGvo47PjYN2N9e8vPSXB6oBaazxcHzXRKkeJOuCOw9t_VjLCsvz6K-cIIjoYrrDuG0gUtrXRFjst3TUQLDTIJ4-G3cEzoiByUoo-s9cQba03C-DdOKfBcLTTJA8oq2S50DBoc1D-qdCFd0g4st2QOYPGE8bQbvLYyEP8mGg5-O5iqK2dV62O_q-CvZ1Rp1J6jd4PjyrxJ4a9R2bb252PY6KS4hs4cyMMX3ny5NeNfQxmLq6_JtnRoTVht22bggaG0jhKIWCIpsBnG6rILyDXimyZFRjxqU9j1wumAPTzdjChrHOm4DzxtyhKCMhGSJC2_Y_DH_G72sKEez70RLHqPeQDAa3n5c4_kCVIYDE97oPnoZ8dc6JAehRDW1_l9eXpnwhi0VHmK_wyrlAmAV9KD4r-bN0r-odW0r19TQZtnl4Lun2oTmPynxWA_8qkZOf_uM_pDGu6akOQrH4uSJoryE7-rFd3ipAo_uswpnQQ17ETT7ahSUkvMCyZMlUPxeMjiGYP5SxEjvK_s5edIK8LBIwl6iErBFt4YwTThYVlBzoo9wiFw6GIlRX6l7PfK97bIlngDAjYAN-HdB-BPOmYtXrioRbdjNDu7NNNihxndPYR44XYrHRWcmGaWrcaVV_en_cB0_CGhC51kxLRwGplSB6Z5-9uWf6ZuWBqJtnuNqEuxGgx5MT7Ruo0smYFCl2I5ICbRe6-8ZceuQxGujOdZVtpZhGO70gFSWWYs-F4kCt7bHdg0OHHCZWEkvmqv36MRim-dareIwU0KcZbVQk1Al0CcysOCzGpWpmDZzoDBi-A0c-4idPMH0A2AUXUCTE9CErUUNjIO2xaaHH5--7sdgkoS-Yyk9ZLjnBqJ9KJLMCpkQDEVRPJvwi2jfZqyt2rYmf2TQZRvpdWhb0H0pWsX2fJ1Fsclsx002ndraTsBTMYt2S016wZWe5QmrzaYZHOe'></script></head>
 <body>
 
-  <header>
-    <div class="container">
-      <div class="nav">
-        <a href="/" class="brand-link">
-          <img src="logo.png" alt="LuckyBonus logo" class="brand-logo">
-        </a>
-
-        <div class="nav-links">
-          <a href="#offers">Top Offers</a>
-          <a href="#benefits">Why Us</a>
-          <a href="#guide">Bonus Guide</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
+  <!-- ── Hero ── -->
   <section class="hero">
-    <div class="container">
+    <div class="wrap">
+      <img
+        src="logo.png"
+        alt="LuckyBonus — Find the Best Casino Bonuses in Seconds"
+        class="hero-img"
+      >
+    </div>
+  </section>
 
-      <div class="hero-logo">
-        <img src="logo.png" alt="LuckyBonus logo">
-      </div>
+  <!-- ── CTA ── -->
+  <div class="cta-wrap">
+    <div class="wrap">
+      <a href="#offers" class="cta-btn">Claim Top Bonus</a>
+    </div>
+  </div>
 
-      <div class="tagline">Find the Best Casino Bonuses in Seconds</div>
-
-      <div class="hero-cta-wrap">
-        <a href="#offers" class="hero-cta">Claim Top Bonus</a>
-      </div>
-
-      <div class="offers-panel" id="offers">
+  <!-- ── Offers Panel ── -->
+  <section id="offers">
+    <div class="wrap">
+      <div class="panel">
         <h2 class="panel-title">Top Casino Bonuses</h2>
 
-        <div class="offer-card">
-          <div class="brand-box">
-            <div class="brand-logo-box">ROYAL ACE<br>CASINO</div>
-            <div class="score-badge"><span>★</span>4.8/5</div>
+        <!-- Card 1 -->
+        <div class="card">
+          <div class="logo-box">
+            <div class="logo-img-wrap">
+              <div class="logo-text-fallback">ROYAL ACE<br>CASINO</div>
+            </div>
+            <div class="rating">
+              <span class="star">★</span> 4.8/5
+            </div>
           </div>
-
-          <div class="offer-main">
-            <h3>Royal Ace Casino</h3>
-            <div class="bonus-line">100% Bonus up to €500</div>
-            <p>Balanced package with strong welcome offer.</p>
+          <div class="card-info">
+            <div class="card-name">Royal Ace Casino</div>
+            <div class="card-bonus">100% Bonus up to €500</div>
+            <div class="card-desc">Balanced package, fast sign-up &amp; classic slots</div>
           </div>
-
           <div class="card-action">
             <a href="#" class="play-btn">Claim Bonus</a>
           </div>
         </div>
 
-        <div class="offer-card">
-          <div class="brand-box">
-            <div class="brand-logo-box">SpinNova</div>
-            <div class="score-badge"><span>★</span>4.7/5</div>
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="logo-box">
+            <div class="logo-img-wrap">
+              <div class="logo-text-fallback">SpinNova</div>
+            </div>
+            <div class="rating">
+              <span class="star">★</span> 4.7/5
+            </div>
           </div>
-
-          <div class="offer-main">
-            <h3>SpinNova</h3>
-            <div class="bonus-line">200 Free Spins + €300 Bonus</div>
-            <p>Great slot offer with extra spins.</p>
+          <div class="card-info">
+            <div class="card-name">SpinNova</div>
+            <div class="card-bonus">200 Free Spins + €300 Bonus</div>
+            <div class="card-desc">Mixing extra spins &amp; first deposit</div>
           </div>
-
           <div class="card-action">
             <a href="#" class="play-btn">Play Now</a>
           </div>
         </div>
 
-        <div class="offer-card">
-          <div class="brand-box">
-            <div class="brand-logo-box">LuckyPeak</div>
-            <div class="score-badge"><span>★</span>4.6/5</div>
+        <!-- Card 3 -->
+        <div class="card">
+          <div class="logo-box">
+            <div class="logo-img-wrap">
+              <div class="logo-text-fallback">LuckoPeak</div>
+            </div>
+            <div class="rating">
+              <span class="star">★</span> 4.6/5
+            </div>
           </div>
-
-          <div class="offer-main">
-            <h3>LuckyPeak</h3>
-            <div class="bonus-line">150% Bonus up to €700</div>
-            <p>High value bonus for new players.</p>
+          <div class="card-info">
+            <div class="card-name">LuckyPeak</div>
+            <div class="card-bonus">50 Free Spins</div>
+            <div class="card-desc">Test top games before depositing</div>
           </div>
-
           <div class="card-action">
             <a href="#" class="play-btn">Get Bonus</a>
           </div>
         </div>
 
-      </div>
+      </div><!-- /panel -->
 
-      <div class="features" id="benefits">
-        <div class="feature-grid">
-          <div class="feature">
-            <div class="feature-icon">🛡</div>
-            <h4>Trusted Brands</h4>
-            <p>Reviewed and presented in a clean, premium comparison layout.</p>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon">🎁</div>
-            <h4>Fresh Promotions</h4>
-            <p>Stay updated on the most rewarding bonus formats and welcome offers.</p>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon">🚀</div>
-            <h4>Fast Access</h4>
-            <p>Quickly compare offers and move directly to the selected casino brand.</p>
-          </div>
+      <!-- ── Trust Features ── -->
+      <div class="features">
+        <div class="feat">
+          <span class="feat-icon">🛡️</span>
+          <h4>Trusted Brands</h4>
+          <p>Reviewed and rated for safe, fair play</p>
+        </div>
+        <div class="feat">
+          <span class="feat-icon">🎁</span>
+          <h4>Fresh Promotions</h4>
+          <p>Stay updated on the most rewarding deals</p>
+        </div>
+        <div class="feat">
+          <span class="feat-icon">🚀</span>
+          <h4>Fast Access</h4>
+          <p>Quickly compare offers and claim rewards</p>
         </div>
       </div>
 
     </div>
   </section>
 
-  <div class="container" id="guide">
-    <div class="footer">
-      <div><strong>Lucky<span>Bonus</span></strong> • Top Online Casino Offers</div>
-      <div class="footer-note">18+ only. Play responsibly. Affiliate-style promotional website.</div>
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="wrap">
+      <div><strong>LuckyBonus</strong>.pro + Top Online Casino Offers</div>
+      <div class="footer-note">
+        18+ only. Gambling can be addictive — please play responsibly.<br>
+        LuckyBonus.pro may receive affiliate commissions. T&amp;Cs apply.
+      </div>
     </div>
-  </div>
+  </footer>
 
 </body>
 </html>
