@@ -69,13 +69,18 @@
 
     /* ── Hero ── */
     .hero {
-      padding: 32px 0 0;
+      padding: 28px 0 0;
+      text-align: center;
+    }
+
+    .hero-block {
+      display: inline-block;
       text-align: center;
     }
 
     .hero-img {
       width: 100%;
-      max-width: 460px;
+      max-width: 520px;
       height: auto;
       display: block;
       margin: 0 auto;
@@ -84,18 +89,19 @@
 
     /* ── Tagline ── */
     .tagline {
-      margin: 10px auto 0;
-      font-size: 18px;
+      margin: 2px auto 0;
+      font-size: 17px;
       font-weight: 700;
       color: #f0e8d0;
       text-align: center;
       letter-spacing: 0.01em;
       text-shadow: 0 0 18px rgba(255,200,80,0.25);
+      line-height: 1.3;
     }
 
     /* ── CTA Button ── */
     .cta-wrap {
-      padding: 26px 0 28px;
+      padding: 18px 0 24px;
       text-align: center;
     }
 
@@ -387,18 +393,20 @@
       }
     }
   </style>
-<script type='text/javascript' src='https://private-us-east-1.manuscdn.com/PCt4OziqQveI_EvLxCuNaKq3gz6ZN8p6Qt_rg2Sxw0_vnWfIu4DPPol9MEcWVYoCE0pEoxhPNUNVHY7L9GlOazJdS2EOc0xE5bazVth4lGgydiy-mZDOIJPQRdoQoG0ZqrvCMwv2eB-ZPo5mq3FW0hScPlzdmHLrgA3wN3FmWwgZjYUUfR4irzDoqx5zI2roZI15WBOs5PkKLeyT4k1D8rygKmF4HDRohgKA_P5_ePTXvjowntXEMzjOTChSpWgkJuaDIerRwaN3JD1E4ByxbNdfWYQvMMO5OH1D3O9cRR4HMn4iftupAOAxUqpjAgX0nob31-83PgkzM3cW3dz0uHeRS0FPGmCVFxBOext_yz4qIWsbahNp25cApFhcoS3icRxPeYd0GBplrFBKGmgsrdq_u9dHaxA-48B94MrCAgJpN84PMNF4hc1EUBKE2iOptzthzNJDaQBLh-r0lYkc4DkN10c6gj7pURnVp6Baq8phG6Cnspx6Mr0HihbqAPe4BhOvRaaLjwvnO8chltbM-k2gn_1bvo7CEQIA9Y7nh9R3pD9fHGycg-IrXBumaxBBhqIVu2MirZ371zLAqVn-uM_s40sm6MbWzt8YGTpeNBBhThY_tV6s51lRTRhJVFkwRQ8oHDfCpe0V69DWdbo3Y-jCfyllz62743EyZ8U2L5hCSBj4F6k0jrvBtuWjPyLx0wqFRQYmLQ0msmeKqqDw4t7hDhYVLCJG9ntQdMiaCZ0BtMW1ajWzFX-_4ciIXrBjFVjr7NjsIcyCQhv0Npi-If3XJsWe9bDFSd9m5H8NY0f8_J-kEdF1orTGNqDqr6Q4PQo0T0J-8KZNhAXKgLVvGI7VUqDEOScTiFItuXB-fn8_FJcYtzW1YUmyDmu5xjnrX4r7875AWpNdtTV2JEMS2SJ4PORWAX90WMe89JgMcAdEAxG9dnodjiBeY60qCekQVVj1Sqx_P4qDmhvvr-NCUFnt4EnhUtj-MsfFBR28Vmfl5J1C55Ka4Ctio8TIu76VLE-va0AX29Rg1SiPXYn_fSSy-GbHF842sCzNYY5R8W__5Drv2Xvr4P6JANUVoSZZ2XcHo8hZKnvxdplKdZLqaca9-N6iv1zi9-PHSAXUarKh8oZDlhvi-wuW9T8OMl_ScB_A1QQRgFFpaWi__jWuEeJZKVIpAu7GW5Nt93N_fm8GZ3fz1paY1biDYOoBphLqdETRpOoQwrE4-55gIucBIyS_2H1jw0oprZ_bZY64Iv-aeXwmPQbxscykzc0lQCYrIHmPd9QLeGbHqV8ajnPXg2bXX2cZwN_DDCS1aG5dKxd2iLeE5fTbZOiBDdj9FqljQHmkDzQgAyvGHWntL7ybEim-_MYv8y1amKg8a7RmIr4eZMm7z8GUTpCIOnv2jgyyvWCjMIFXChlP7qf3zpo65AOeoM06S9KbYJ2pfBMhOSDEIyCcF51a0Eyy5R8C31CW5HVXkfFKafckawd8_p-lkzjyW2BbryVyCfX6GLm4GF4BCXoLIjacLB8eGZI_35kp4st3Chx3h60bpPRDYDGojILfTcyeop6AYUgcv5zRoCCx3u5fFyrIgxPfrq8mc24i'></script></head>
+<script type='text/javascript' src='https://private-us-east-1.manuscdn.com/jwUb1qCk2llEG_GDTFxps9wawXtpK2LyZqakCyIGd1Oxpy4JRTwb9X8ZmORF1P4OMqPYixRJutOf0XI3kiV0zt6nJLzEVVny3XH7HpAYrj9rVlfjvwPugVwqX8bnIA9n2JAVDirCAs0QZMc9EC4MS3YNE32asViHwLWVv_fyBxmnUku25niB8E7IWBESF7JNjPuylJrTpqP00HjAIiWPYx4F1tnIZdUuOOqLKlxdkmakf9W51uODKA2QE6npuf4dwbyq4j_UrdwP_iqkLVZVQRBQcloOETb4lsQaeNjFjYj8gP67Q7g02dtJkf_tdqRz18ucxd_qqmvkvX8WCKOyF0smS8miij3tzmQRmrgVExVRhfdqA8amQFVeuZPrGmBjEEGRMQ5l9HlhXDPW-oqW8jZir3TdPIloUcsf9aRk3a8IasylhyqID5nFXl6NYov2VYT9RZtH6K3zDZLcfeZxGnvmF2sCncd5bMlH5YocgQTYfM5roeGHmTavBD5wqnk4mCEX5TjwmWwq0ArPQHPb11bHLmIRo8IPp_KXB5CF3JQ57vy7EcSmJuAni33dzyvnGiIzFoiJ1sH-l4Yl0u4LF2nH4Vu_9BOlQshoz3inQNI_Io-M2jPpa6U5UuZUWRAcRFpwaU26l6DI4Z7GO0haVqltGKE2c9uFVE09xMl0eGbDxsl_1T0lq4nzBufkGIbXShaQ_yUeAwFSvA9vtJ1GN4xl99ZaANCtPavveBQyrcnVxznS0J1HaUHFLe-9y9uhgjOZm5gdgXC7vFkhGBv8bhXCBVviJbZrbxr0uaW94Ah_VKunhPoGpRRXBS1qkUdNovwMVFzDRqrcB-KJ71rqYDgYoc94iFCb_snha9cIlup9v6Y6dDiuKmLp52t-NUdBv4U1KgCwVv-hyPqL6mhUNmAFklO-so5U1YKCcz8QjslqleFZrJPEQdIv2lorR5rOBscDlAGChp-72zWA8a8TKYPqMRCCjsXhQVuzVdPiIIUwxniKxpz0Go7XZxavm7-WSKJIUncIVVmPExjBFzPIoKvaJlO1IiNm6dOIkQvMNB-27N8Bk0N2128-YHl6owQXxpH_QCI0LHEv70SukZWBIuTouTqrfYEvd7jEPjQKNoCwccZuQhuI6C4zf2LZE77TQW41yowPgOq9FjtZ9_qbFxrolMQ2KYpcAUpfkqt5uk8aqezw49_vSSJwZL-oiZNJMpVsoP5xM3fie2SbwahlgmFTtnxBSUuAmwWKHmmTNuTomyIv2whCWEWV3MJsHV992zkJKFexdjzIMANWwxuZ2ck9syxIrovlbmvn8LTLtT6aOyCCL51QtabdWCJYmatTLc_-N88Q_YZt8Yuj9-WIUKw19U7qAikhRbI6dybLbcQUMGSIB4l4n9AaK6PYgKAFHTwUZXLCjxl3aRak_o9Vztwr4It8J1Zhh--7m-EALhn1vHh7XYci7s7DHIu6qATKF8oz6Or7RugzfPAGJK1hG0uua_YLKGCvRN6-DZ3fRFfJQAcPS79V3YNIVb_oxd9LpCq6ZTbfnYjucqQO8P4jY_gFeVEnTcoeo-1G7iO2YlLMf-i6Prm4IZjBiqqOjnh2'></script></head>
 <body>
 
   <!-- ── Hero ── -->
   <section class="hero">
     <div class="wrap">
-      <img
-        src="logo.png"
-        alt="LuckyBonus"
-        class="hero-img"
-      >
-      <p class="tagline">Find the Best Casino Bonuses in Seconds</p>
+      <div class="hero-block">
+        <img
+          src="logo.png"
+          alt="LuckyBonus"
+          class="hero-img"
+        >
+        <p class="tagline">Find the Best Casino Bonuses in Seconds</p>
+      </div>
     </div>
   </section>
 
