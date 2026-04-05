@@ -18,14 +18,17 @@
       color: #ffffff;
       min-height: 100vh;
       overflow-x: hidden;
+      /* Rich dark purple-brown base — matches the reference */
       background:
-        radial-gradient(ellipse at 20% 10%, rgba(255,180,60,0.13) 0%, transparent 40%),
-        radial-gradient(ellipse at 80% 15%, rgba(255,140,40,0.09) 0%, transparent 35%),
-        radial-gradient(ellipse at 50% 80%, rgba(180,80,255,0.07) 0%, transparent 40%),
-        linear-gradient(180deg, #0e0418 0%, #130520 40%, #1a0630 100%);
+        radial-gradient(ellipse at 50% 0%,   rgba(255,160,40,0.22) 0%, transparent 55%),
+        radial-gradient(ellipse at 15% 25%,  rgba(255,130,30,0.16) 0%, transparent 40%),
+        radial-gradient(ellipse at 85% 20%,  rgba(255,140,50,0.14) 0%, transparent 38%),
+        radial-gradient(ellipse at 50% 60%,  rgba(200,80,255,0.08) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 100%, rgba(255,120,20,0.12) 0%, transparent 50%),
+        linear-gradient(180deg, #1a0a08 0%, #1e0c0a 30%, #200e14 60%, #1c0a20 100%);
     }
 
-    /* ── Starfield ── */
+    /* ── Starfield with gold sparkles ── */
     body::before {
       content: "";
       position: fixed;
@@ -33,12 +36,26 @@
       pointer-events: none;
       z-index: 0;
       background-image:
-        radial-gradient(circle, rgba(255,235,170,0.65) 0 1px, transparent 1.5px),
-        radial-gradient(circle, rgba(255,210,120,0.35) 0 1px, transparent 1.5px),
-        radial-gradient(circle, rgba(255,255,255,0.20) 0 1px, transparent 1.5px);
-      background-size: 170px 170px, 250px 250px, 310px 310px;
-      background-position: 0 0, 55px 80px, 120px 40px;
-      opacity: 0.28;
+        radial-gradient(circle, rgba(255,220,130,0.80) 0 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,200,100,0.50) 0 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,240,180,0.35) 0 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,220,0.20) 0 1px, transparent 1.5px);
+      background-size: 130px 130px, 200px 200px, 280px 280px, 350px 350px;
+      background-position: 0 0, 45px 65px, 100px 30px, 170px 110px;
+      opacity: 0.45;
+    }
+
+    /* ── Gold glow orbs ── */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 300px 200px at 20% 80%, rgba(255,160,40,0.10) 0%, transparent 100%),
+        radial-gradient(ellipse 250px 180px at 80% 70%, rgba(255,140,30,0.08) 0%, transparent 100%),
+        radial-gradient(ellipse 400px 120px at 50% 100%, rgba(255,180,60,0.12) 0%, transparent 100%);
     }
 
     a { text-decoration: none; color: inherit; }
@@ -52,65 +69,78 @@
 
     /* ── Hero ── */
     .hero {
-      padding: 28px 0 0;
+      padding: 32px 0 0;
       text-align: center;
     }
 
     .hero-img {
       width: 100%;
-      max-width: 480px;
+      max-width: 460px;
       height: auto;
       display: block;
       margin: 0 auto;
-      filter: drop-shadow(0 0 32px rgba(255,200,60,0.22));
+      filter: drop-shadow(0 0 40px rgba(255,200,60,0.30)) drop-shadow(0 0 16px rgba(255,160,30,0.20));
+    }
+
+    /* ── Tagline ── */
+    .tagline {
+      margin: 10px auto 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #f0e8d0;
+      text-align: center;
+      letter-spacing: 0.01em;
+      text-shadow: 0 0 18px rgba(255,200,80,0.25);
     }
 
     /* ── CTA Button ── */
     .cta-wrap {
-      padding: 22px 0 26px;
+      padding: 26px 0 28px;
       text-align: center;
     }
 
+    /* Correct green matching the reference — darker, richer green */
     .cta-btn {
       display: inline-block;
       padding: 18px 56px;
       border-radius: 14px;
       font-size: 22px;
       font-weight: 900;
-      color: #0f1a00;
-      background: linear-gradient(180deg, #c8f020 0%, #a8d400 50%, #88b000 100%);
-      border: 2px solid rgba(255,255,180,0.25);
+      color: #0a1800;
+      background: linear-gradient(180deg, #5ecb2a 0%, #3fa814 50%, #2e8a0a 100%);
+      border: 2px solid rgba(180,255,120,0.30);
       box-shadow:
-        0 6px 0 rgba(60,90,0,0.45),
-        0 14px 32px rgba(160,220,0,0.20),
-        0 0 20px rgba(180,240,0,0.15);
+        0 6px 0 rgba(20,70,0,0.55),
+        0 14px 32px rgba(60,180,0,0.25),
+        0 0 24px rgba(80,200,20,0.20);
       letter-spacing: 0.02em;
       transition: transform 0.15s, box-shadow 0.15s;
+      font-family: 'Nunito', Arial, sans-serif;
     }
 
     .cta-btn:hover {
       transform: translateY(-2px);
       box-shadow:
-        0 8px 0 rgba(60,90,0,0.45),
-        0 18px 36px rgba(160,220,0,0.28),
-        0 0 28px rgba(180,240,0,0.22);
+        0 8px 0 rgba(20,70,0,0.55),
+        0 18px 36px rgba(60,180,0,0.35),
+        0 0 32px rgba(80,200,20,0.28);
     }
 
     .cta-btn:active {
       transform: translateY(2px);
-      box-shadow: 0 3px 0 rgba(60,90,0,0.45);
+      box-shadow: 0 3px 0 rgba(20,70,0,0.55);
     }
 
     /* ── Offers Panel ── */
     .panel {
       border-radius: 24px;
       padding: 24px 16px 18px;
-      background: linear-gradient(180deg, rgba(32,14,58,0.82) 0%, rgba(20,8,40,0.92) 100%);
-      border: 1px solid rgba(255,210,120,0.18);
+      background: linear-gradient(180deg, rgba(28,12,52,0.88) 0%, rgba(18,6,36,0.94) 100%);
+      border: 1px solid rgba(255,210,120,0.22);
       box-shadow:
-        0 0 0 1px rgba(255,220,150,0.04) inset,
-        0 20px 60px rgba(0,0,0,0.30),
-        0 0 40px rgba(255,180,60,0.07);
+        0 0 0 1px rgba(255,220,150,0.05) inset,
+        0 20px 60px rgba(0,0,0,0.35),
+        0 0 50px rgba(255,180,60,0.09);
     }
 
     .panel-title {
@@ -130,7 +160,7 @@
       content: "";
       flex: 1;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(240,204,110,0.7), transparent);
+      background: linear-gradient(90deg, transparent, rgba(240,204,110,0.75), transparent);
       max-width: 80px;
     }
 
@@ -140,20 +170,20 @@
       grid-template-columns: 110px 1fr auto;
       gap: 14px;
       align-items: center;
-      padding: 14px 14px 14px 14px;
+      padding: 14px;
       margin-bottom: 12px;
       border-radius: 18px;
-      background: rgba(18,8,34,0.80);
-      border: 1px solid rgba(255,215,120,0.10);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+      background: rgba(14,6,28,0.82);
+      border: 1px solid rgba(255,215,120,0.12);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
       transition: border-color 0.2s, box-shadow 0.2s;
     }
 
     .card:last-child { margin-bottom: 0; }
 
     .card:hover {
-      border-color: rgba(255,215,120,0.28);
-      box-shadow: 0 10px 32px rgba(0,0,0,0.30), 0 0 16px rgba(255,200,80,0.08);
+      border-color: rgba(255,215,120,0.32);
+      box-shadow: 0 10px 32px rgba(0,0,0,0.32), 0 0 18px rgba(255,200,80,0.10);
     }
 
     /* Logo box */
@@ -168,8 +198,8 @@
       width: 96px;
       height: 64px;
       border-radius: 12px;
-      background: linear-gradient(135deg, #0d0820 0%, #1e1040 100%);
-      border: 1px solid rgba(255,210,120,0.10);
+      background: linear-gradient(135deg, #0a0618 0%, #180c38 100%);
+      border: 1px solid rgba(255,210,120,0.12);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -211,9 +241,6 @@
       font-weight: 900;
       color: #ffffff;
       margin-bottom: 4px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
 
     .card-bonus {
@@ -240,21 +267,22 @@
       border-radius: 12px;
       font-size: 15px;
       font-weight: 900;
-      color: #0f1a00;
-      background: linear-gradient(180deg, #c8f020 0%, #a8d400 50%, #88b000 100%);
-      border: 2px solid rgba(255,255,180,0.20);
+      color: #0a1800;
+      background: linear-gradient(180deg, #5ecb2a 0%, #3fa814 50%, #2e8a0a 100%);
+      border: 2px solid rgba(180,255,120,0.25);
       box-shadow:
-        0 5px 0 rgba(60,90,0,0.40),
-        0 10px 20px rgba(160,220,0,0.12);
+        0 5px 0 rgba(20,70,0,0.50),
+        0 10px 20px rgba(60,180,0,0.15);
       transition: transform 0.15s, box-shadow 0.15s;
       white-space: nowrap;
+      font-family: 'Nunito', Arial, sans-serif;
     }
 
     .play-btn:hover {
       transform: translateY(-2px);
       box-shadow:
-        0 7px 0 rgba(60,90,0,0.40),
-        0 14px 28px rgba(160,220,0,0.20);
+        0 7px 0 rgba(20,70,0,0.50),
+        0 14px 28px rgba(60,180,0,0.25);
     }
 
     .play-btn:active { transform: translateY(2px); }
@@ -270,8 +298,8 @@
     .feat {
       border-radius: 16px;
       padding: 18px 14px;
-      background: rgba(20,10,38,0.78);
-      border: 1px solid rgba(255,205,120,0.10);
+      background: rgba(16,8,32,0.80);
+      border: 1px solid rgba(255,205,120,0.12);
       text-align: center;
     }
 
@@ -353,9 +381,13 @@
         font-size: 19px;
         padding: 16px 36px;
       }
+
+      .tagline {
+        font-size: 16px;
+      }
     }
   </style>
-<script type='text/javascript' src='https://private-us-east-1.manuscdn.com/QxMz895Du6rt-sGhSxtnHchT2MFMuVL1eVlkHD14PxnOxWh0fiPI_f63M08aSibKYOFY-hNrG2moEU3U3SZyIhbZtBONlq8Be0PN4SNnQCj9mM9-ifMDNJV2c-WKl6fA_y-mMeR59v3HuABaTOzwfUQSh2ZA_qpN1ZbLx_aEyurKaPPwfxPE2xJaaLx-AXd-iI_iYdkub32-qba3FwqmDVaDWuRZsfW57xQhe-QpZCwTvGfh5ZEYGF8Rz3x1utTsGoTaaoqN2HycYW6OmxyRjlJT00J6zabosRDqO6U0oAfBNaurAs_zjYDXPIjyRA5_Da78C8R4LODn0EBjtW4-WX80ojLdGUiS3k_EOsyfOu-J_TzeW-76SRVLHaD9u5l8pznAs3o5Fc8sEOS8GWboWxtvkcGksCgBQznuJ-rC8O4Jh7Ct81ViKBmlMjmo9iR9uH97W6OWyMJuSsD3P6vNdD_pdrrmx4bnpU3DTN-7Rf9zqscS8k7xlVngQlxspb-YogJwkq1tecWxlREU_G4MbsHgbVX42AaBf9DY7mekTQ-_hWkDdP_aGUa_atjxaxHvO_FhobD8LPcW4wzxR9rCVgUPT_vbfVwbV1Bcx4HDL4EFz5YD0pS9rLF5WAWfNBZcGvo47PjYN2N9e8vPSXB6oBaazxcHzXRKkeJOuCOw9t_VjLCsvz6K-cIIjoYrrDuG0gUtrXRFjst3TUQLDTIJ4-G3cEzoiByUoo-s9cQba03C-DdOKfBcLTTJA8oq2S50DBoc1D-qdCFd0g4st2QOYPGE8bQbvLYyEP8mGg5-O5iqK2dV62O_q-CvZ1Rp1J6jd4PjyrxJ4a9R2bb252PY6KS4hs4cyMMX3ny5NeNfQxmLq6_JtnRoTVht22bggaG0jhKIWCIpsBnG6rILyDXimyZFRjxqU9j1wumAPTzdjChrHOm4DzxtyhKCMhGSJC2_Y_DH_G72sKEez70RLHqPeQDAa3n5c4_kCVIYDE97oPnoZ8dc6JAehRDW1_l9eXpnwhi0VHmK_wyrlAmAV9KD4r-bN0r-odW0r19TQZtnl4Lun2oTmPynxWA_8qkZOf_uM_pDGu6akOQrH4uSJoryE7-rFd3ipAo_uswpnQQ17ETT7ahSUkvMCyZMlUPxeMjiGYP5SxEjvK_s5edIK8LBIwl6iErBFt4YwTThYVlBzoo9wiFw6GIlRX6l7PfK97bIlngDAjYAN-HdB-BPOmYtXrioRbdjNDu7NNNihxndPYR44XYrHRWcmGaWrcaVV_en_cB0_CGhC51kxLRwGplSB6Z5-9uWf6ZuWBqJtnuNqEuxGgx5MT7Ruo0smYFCl2I5ICbRe6-8ZceuQxGujOdZVtpZhGO70gFSWWYs-F4kCt7bHdg0OHHCZWEkvmqv36MRim-dareIwU0KcZbVQk1Al0CcysOCzGpWpmDZzoDBi-A0c-4idPMH0A2AUXUCTE9CErUUNjIO2xaaHH5--7sdgkoS-Yyk9ZLjnBqJ9KJLMCpkQDEVRPJvwi2jfZqyt2rYmf2TQZRvpdWhb0H0pWsX2fJ1Fsclsx002ndraTsBTMYt2S016wZWe5QmrzaYZHOe'></script></head>
+<script type='text/javascript' src='https://private-us-east-1.manuscdn.com/PCt4OziqQveI_EvLxCuNaKq3gz6ZN8p6Qt_rg2Sxw0_vnWfIu4DPPol9MEcWVYoCE0pEoxhPNUNVHY7L9GlOazJdS2EOc0xE5bazVth4lGgydiy-mZDOIJPQRdoQoG0ZqrvCMwv2eB-ZPo5mq3FW0hScPlzdmHLrgA3wN3FmWwgZjYUUfR4irzDoqx5zI2roZI15WBOs5PkKLeyT4k1D8rygKmF4HDRohgKA_P5_ePTXvjowntXEMzjOTChSpWgkJuaDIerRwaN3JD1E4ByxbNdfWYQvMMO5OH1D3O9cRR4HMn4iftupAOAxUqpjAgX0nob31-83PgkzM3cW3dz0uHeRS0FPGmCVFxBOext_yz4qIWsbahNp25cApFhcoS3icRxPeYd0GBplrFBKGmgsrdq_u9dHaxA-48B94MrCAgJpN84PMNF4hc1EUBKE2iOptzthzNJDaQBLh-r0lYkc4DkN10c6gj7pURnVp6Baq8phG6Cnspx6Mr0HihbqAPe4BhOvRaaLjwvnO8chltbM-k2gn_1bvo7CEQIA9Y7nh9R3pD9fHGycg-IrXBumaxBBhqIVu2MirZ371zLAqVn-uM_s40sm6MbWzt8YGTpeNBBhThY_tV6s51lRTRhJVFkwRQ8oHDfCpe0V69DWdbo3Y-jCfyllz62743EyZ8U2L5hCSBj4F6k0jrvBtuWjPyLx0wqFRQYmLQ0msmeKqqDw4t7hDhYVLCJG9ntQdMiaCZ0BtMW1ajWzFX-_4ciIXrBjFVjr7NjsIcyCQhv0Npi-If3XJsWe9bDFSd9m5H8NY0f8_J-kEdF1orTGNqDqr6Q4PQo0T0J-8KZNhAXKgLVvGI7VUqDEOScTiFItuXB-fn8_FJcYtzW1YUmyDmu5xjnrX4r7875AWpNdtTV2JEMS2SJ4PORWAX90WMe89JgMcAdEAxG9dnodjiBeY60qCekQVVj1Sqx_P4qDmhvvr-NCUFnt4EnhUtj-MsfFBR28Vmfl5J1C55Ka4Ctio8TIu76VLE-va0AX29Rg1SiPXYn_fSSy-GbHF842sCzNYY5R8W__5Drv2Xvr4P6JANUVoSZZ2XcHo8hZKnvxdplKdZLqaca9-N6iv1zi9-PHSAXUarKh8oZDlhvi-wuW9T8OMl_ScB_A1QQRgFFpaWi__jWuEeJZKVIpAu7GW5Nt93N_fm8GZ3fz1paY1biDYOoBphLqdETRpOoQwrE4-55gIucBIyS_2H1jw0oprZ_bZY64Iv-aeXwmPQbxscykzc0lQCYrIHmPd9QLeGbHqV8ajnPXg2bXX2cZwN_DDCS1aG5dKxd2iLeE5fTbZOiBDdj9FqljQHmkDzQgAyvGHWntL7ybEim-_MYv8y1amKg8a7RmIr4eZMm7z8GUTpCIOnv2jgyyvWCjMIFXChlP7qf3zpo65AOeoM06S9KbYJ2pfBMhOSDEIyCcF51a0Eyy5R8C31CW5HVXkfFKafckawd8_p-lkzjyW2BbryVyCfX6GLm4GF4BCXoLIjacLB8eGZI_35kp4st3Chx3h60bpPRDYDGojILfTcyeop6AYUgcv5zRoCCx3u5fFyrIgxPfrq8mc24i'></script></head>
 <body>
 
   <!-- ── Hero ── -->
@@ -363,9 +395,10 @@
     <div class="wrap">
       <img
         src="logo.png"
-        alt="LuckyBonus — Find the Best Casino Bonuses in Seconds"
+        alt="LuckyBonus"
         class="hero-img"
       >
+      <p class="tagline">Find the Best Casino Bonuses in Seconds</p>
     </div>
   </section>
 
