@@ -37,8 +37,8 @@
         radial-gradient(circle, rgba(255,228,150,0.75) 0 1px, transparent 1.5px),
         radial-gradient(circle, rgba(255,210,120,0.45) 0 1px, transparent 1.5px),
         radial-gradient(circle, rgba(255,255,255,0.25) 0 1px, transparent 1.5px);
-      background-size: 180px 180px, 260px 260px, 140px 140px;
-      background-position: 0 0, 40px 80px, 90px 30px;
+      background-size:180px 180px, 260px 260px, 140px 140px;
+      background-position:0 0, 40px 80px, 90px 30px;
       opacity:0.28;
       z-index:0;
     }
@@ -55,7 +55,7 @@
     }
 
     .topbar{
-      padding:24px 0 8px;
+      padding:18px 0 8px;
     }
 
     .nav{
@@ -63,26 +63,24 @@
       justify-content:space-between;
       align-items:center;
       gap:20px;
-      padding:18px 24px;
-      border-radius:20px;
-      background:rgba(7,10,27,0.7);
+      padding:16px 24px;
+      border-radius:22px;
+      background:rgba(7,10,27,0.72);
       border:1px solid rgba(255,215,130,0.10);
       box-shadow:0 10px 40px rgba(0,0,0,0.25);
       backdrop-filter:blur(8px);
     }
 
-    .logo{
-      font-size:44px;
-      font-weight:800;
-      line-height:1;
-      letter-spacing:-1px;
-      color:#fff;
-      text-shadow:0 0 16px rgba(255,220,120,0.18);
+    .brand-link{
+      display:inline-flex;
+      align-items:center;
     }
 
-    .logo span{
-      color:#f2c24f;
-      text-shadow:0 0 18px rgba(242,194,79,0.28);
+    .brand-logo{
+      height:68px;
+      width:auto;
+      display:block;
+      object-fit:contain;
     }
 
     .nav-links{
@@ -98,37 +96,30 @@
     }
 
     .hero{
-      padding:30px 0 26px;
+      padding:28px 0 26px;
       text-align:center;
     }
 
     .hero-logo{
-      max-width:760px;
-      margin:0 auto 12px;
-      padding-top:8px;
+      max-width:860px;
+      margin:0 auto 10px;
+      padding-top:10px;
     }
 
-    .hero-logo h1{
-      margin:0;
-      font-size:72px;
-      line-height:0.98;
-      font-weight:900;
-      letter-spacing:-2px;
-      color:#fff;
-      text-shadow:
-        0 0 10px rgba(255,215,120,0.14),
-        0 0 28px rgba(255,190,80,0.18);
-    }
-
-    .hero-logo h1 span{
-      color:#f3c54d;
+    .hero-logo-image{
+      width:min(760px, 100%);
+      height:auto;
+      display:block;
+      margin:0 auto 10px;
+      object-fit:contain;
+      filter:drop-shadow(0 0 14px rgba(255,190,70,0.10));
     }
 
     .tagline{
-      margin:14px 0 0;
-      font-size:20px;
+      margin:10px 0 0;
+      font-size:22px;
       color:#f0f2f8;
-      opacity:0.95;
+      opacity:0.96;
       text-shadow:0 0 14px rgba(255,230,160,0.08);
     }
 
@@ -157,8 +148,7 @@
       border-radius:28px;
       padding:28px 18px 20px;
       border:1px solid rgba(255,204,112,0.18);
-      background:
-        linear-gradient(180deg, rgba(35,24,58,0.78), rgba(18,13,39,0.86));
+      background:linear-gradient(180deg, rgba(35,24,58,0.78), rgba(18,13,39,0.86));
       box-shadow:
         0 0 0 1px rgba(255,220,140,0.04) inset,
         0 20px 60px rgba(0,0,0,0.26),
@@ -207,12 +197,11 @@
       align-items:flex-start;
     }
 
-    .brand-logo{
+    .brand-logo-box{
       width:140px;
       height:92px;
       border-radius:16px;
-      background:
-        linear-gradient(180deg, rgba(8,8,18,0.85), rgba(18,14,35,0.95));
+      background:linear-gradient(180deg, rgba(8,8,18,0.85), rgba(18,14,35,0.95));
       border:1px solid rgba(255,214,123,0.10);
       display:flex;
       align-items:center;
@@ -336,8 +325,12 @@
     }
 
     @media (max-width: 980px){
-      .hero-logo h1{
-        font-size:56px;
+      .brand-logo{
+        height:56px;
+      }
+
+      .hero-logo-image{
+        width:min(640px, 100%);
       }
 
       .offer-card{
@@ -364,12 +357,8 @@
         align-items:flex-start;
       }
 
-      .logo{
-        font-size:36px;
-      }
-
-      .hero-logo h1{
-        font-size:42px;
+      .brand-logo{
+        height:48px;
       }
 
       .tagline{
@@ -390,7 +379,7 @@
         display:none;
       }
 
-      .brand-logo{
+      .brand-logo-box{
         width:100%;
         max-width:180px;
       }
@@ -402,7 +391,10 @@
   <div class="topbar">
     <div class="container">
       <div class="nav">
-        <div class="logo">Lucky<span>Bonus</span></div>
+        <a href="/" class="brand-link">
+          <img src="logo.png" alt="LuckyBonus logo" class="brand-logo">
+        </a>
+
         <div class="nav-links">
           <a href="#offers">Top Offers</a>
           <a href="#benefits">Why Us</a>
@@ -416,7 +408,7 @@
     <div class="container">
 
       <div class="hero-logo">
-        <h1>Lucky<span>Bonus</span></h1>
+        <img src="logo.png" alt="LuckyBonus logo" class="hero-logo-image">
         <div class="tagline">Find the Best Casino Bonuses in Seconds</div>
       </div>
 
@@ -429,7 +421,7 @@
 
         <div class="offer-card">
           <div class="brand-box">
-            <div class="brand-logo">ROYAL ACE<br>CASINO</div>
+            <div class="brand-logo-box">ROYAL ACE<br>CASINO</div>
             <div class="score-badge"><span>★</span>4.8/5</div>
           </div>
 
@@ -446,7 +438,7 @@
 
         <div class="offer-card">
           <div class="brand-box">
-            <div class="brand-logo">SpinNova</div>
+            <div class="brand-logo-box">SpinNova</div>
             <div class="score-badge"><span>★</span>4.7/5</div>
           </div>
 
@@ -463,7 +455,7 @@
 
         <div class="offer-card">
           <div class="brand-box">
-            <div class="brand-logo">LuckyPeak</div>
+            <div class="brand-logo-box">LuckyPeak</div>
             <div class="score-badge"><span>★</span>4.6/5</div>
           </div>
 
