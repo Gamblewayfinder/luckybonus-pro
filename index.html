@@ -73,54 +73,25 @@
       text-align: center;
     }
 
-    /* Wrapper that clips the bottom transparent area of logo.png.
-       logo.png is 1536x1024 but content ends at row 675 (~65.9% of height).
-       We show only 68% of the image height to expose the tagline zone. */
     .hero-block {
       display: inline-block;
       text-align: center;
-      position: relative;
-      width: min(480px, 100%);
     }
 
-    .hero-img-wrap {
-      width: 100%;
-      /* Show only top 68% of the image — hides the 349px transparent bottom */
-      overflow: hidden;
-      height: 0;
-      padding-bottom: 68%; /* 68% of width = visible portion */
-      position: relative;
-    }
-
+    /* logo.png now has tagline baked in and is cropped to 1536x730.
+       The image aspect ratio is 1536/730 = 2.1:1 */
     .hero-img {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
+      max-width: 500px;
       height: auto;
-      filter: drop-shadow(0 0 40px rgba(255,200,60,0.30)) drop-shadow(0 0 16px rgba(255,160,30,0.20));
-    }
-
-    /* ── Tagline ── */
-    /* Positioned right-aligned under 'LuckyBonus' text in the image.
-       The text in logo.png sits roughly in the right 70% of the image. */
-    .tagline {
       display: block;
-      margin: 4px 0 0 auto;
-      padding-right: 4%;
-      width: 72%;
-      font-size: 15px;
-      font-weight: 700;
-      color: #f0e8d0;
-      text-align: center;
-      letter-spacing: 0.01em;
-      text-shadow: 0 0 18px rgba(255,200,80,0.25);
-      line-height: 1.3;
+      margin: 0 auto;
+      filter: drop-shadow(0 0 40px rgba(255,200,60,0.30)) drop-shadow(0 0 16px rgba(255,160,30,0.20));
     }
 
     /* ── CTA Button ── */
     .cta-wrap {
-      padding: 20px 0 24px;
+      padding: 16px 0 24px;
       text-align: center;
     }
 
@@ -412,21 +383,18 @@
       }
     }
   </style>
-<script type='text/javascript' src='https://private-us-east-1.manuscdn.com/Ex0mN1lWOMrqm5DQtZR5n1faM3BpE2kINoK1GIk5AGa9GKtFPoPB3rF8PW8aAbF5pg8AaNiINVPLdQiFB5Aj5kQJ6na0pitarilO3nPLqSnxXCZ66ZOMjCYA3jGLcKCTR9eoZfs2lav8JX2w9qT1_bJo7ApazIsTBew1baWX8bvQg0FiPNIQ6JU9s0lRuIT2ue1HoXPCoKSIFTe3nO5YyLznotWyafkO72FtWV6GC0PbaU4Rf_kg9rvxFb6xrE0OxYn3lOv7S4ndyWmk2B_iU1DiO6l4SYfdJTNPO1nHD6QsAlxivpRUmboQu8N0atggWGvoj6OAT11H4WIajJS2XR1TNtOz8g7tR3Sjh6cyBGD4g6GzImkaAtWaIfA1WAF8pfKMEpMdwITsXiV4i2V5XsevA3RreE6lJbWQtlp4DZQEBNmMfy9DCB3a--ulL1CNlRQ9nwnHx2MtMypvZyyZRXiAroYHLeK9y5OrKKXKikddpoxVRjcIvkjwwjon_IyN4qkqhi84gPjKQmP4iFd6GUCSAcwiu-LXlfMtexQ43A-dLLpGc9kQVZJ9m9b4NuHSVvrhfI2icC9_TeXeyOHylb6YlZmHXfrWwXj8cFMvHWaDXktytLLYun55MT9ZteVaOkwgZWOUzmocXM1KyYHNNJJ3KQvUaO_erQpQ5-JRYt0zbBrhTHdhiLjQTJu731eE3TfsQnjcap5K6j3PROeac3MrxQtSfsoFzzv6h4cq5EPdzGAVbwKYTwRDPsUz3cvbU8htOdmLp_pQLjxdmCGUYulAGG72HLg9v5BmlfSMzHk3VWUZSW_-QHroTDQK3mBhp6LGREXK3B4klCHnJW7y7NZ5p_lqohwe_Yi559dbiTbclQ8IZ6sUeYbwNjwK-Zb_2B_GQCJsPLRnfhn9y9jBa9p46SIRkoL4bCEHcUw6p_z3h6M6qUWkMED8rNkoTpw_uA9zqkCzwfoUOTYO8K9tqKux4ere2Uqmndj8Hmf6cJVFkBTok_mHB3lk4wsq2aXX7TDSwfr1DiysW0BLPPV3uP_M78F9D_coLkORTtUNqXaXYvRXZxdui4BOwtKtR7x0A8YHrf72CgE6LA3ZxGAI2W4_bY93UJWOFvdOcVkNGw_lLqants72UDy-1WEKfTCIEBQHqZ3NPzcdhbAtY94BGCL4aBrANTAZKoT0Cypuq8J9QdgfJ0MJqtCkME8yCRExvD-30prTlmmph2_uJJ3YoN1kLoOMVlSL-i0hTWZ4Kn2905sPEUUAoq1siDA_B5O_T6wGSoGGqq6Wl-BfJ_fEI8KFmYlOVz61cH9PQuoMzucTMLMos30ePltAh459694HrBIqGRBX7efKEhdPdJq-w3hkeI4BoV8MRFreT5bXGZqD0d2yl4J0lFcro1N8c-sEngh-DdmNjsUNBCMjeEir3ngCvh0MR9R6Y72DXpKDS4geMC47CsJT3qMniOuRffowBNY0DCfpefk2fnq6O0WNi292BPLmPBvCRYIXO9YoQDFKW2u97ff-Uio56pj5Kz7nt71wHycUq1uUYAyA-nEbVcYx6NQFtqi3GnSgLA-WueggiAo3J4F33ZdKupBAX-oi'></script></head>
+<script type='text/javascript' src='https://private-us-east-1.manuscdn.com/URZNf0BQLgQL3t7noVSqbOAVkotq2XLatluvgx4hva6rezFKOAyfW40901lWNSnAFJYl4BpV9B8s5n9POZvN1oebPQWVlqnJlVDUiw1lj_CcwJSrf18FAbZl7OW9r0gQTZGHuU0Rj8_m2xhYJKspxD5glbZSoC_idrA4Vfm49LTsKGRGNULwS2nD3nM8GYF4JuhAxy69Cnudq-JCaXaGkqrRlbwr_-LcMwXkQNrjtu3R7R44ORrrp8dc66mBk2_61WpFtT7bTdotsfxXxjf1pZvuaw9FU92y8cZTwDt1GGdsy29FS0xGzdA9BzodY6pIu2VmKaKqHRFNnoRc9N_lG8gspvok2dr6tJBkTWb_tzO_1Eljj27e8hctgLPDmDT7rZ5LBLtLZF_6Aq_PXcyAGA8sGaERWTQlimReqXxhu6hoUJ3vvyWYPeFEiFp2P6ZcMc8mk5qmDkgb2-Ilk_p1FLNyAKj1RrQcxTfy-QSOxQn2vLcL_OGH26WQ8mUc4u1xYHJXIK9Lup7xfILCgaZgAQriupglRngz39vunDyUpXZjkG4OBT9zqYraQ9_kCkRVe1JvK0JiP8Qb1xZxj7ERMG1HmPhWUFysXx2nJ4MzW33Q1Kst2mKnVlpQ93uEUvAtkoIMitGuXFfvORlrvNm46GfBBqV7DQN_aTEB1lD3Qm6lN4CFvhZTdwQKHVrVxEL7dqVMJSY9thahE8Zg1vfHMRO9mU72oyGVGV0KXaa5--QHWAds0Od4CE_Lt2jhEG7qh8IwU25JzJog0971sFtI9s0BvDeX-jFGci25csg_bha1cOQOTPlPDWjXak13dZg3qX8Yn5fqd9pJTMhU_r1k4wRGJMjhMpRUYQVlFnG24jVeE-swPoCbGDRYC039a85LqUUrw7nC8xAWji-PPnMkn95fSL_2DosfUptn8KF-vx-X3SLCoO7uFawbuyR3dl1HQKOsMnlAwBMdmNvkoKfYoo0G48oitC-CEhpND0mL1NLhFtG5aB4HsJn3epAa5t495kJZtP8UuYzZoAaRMWT9LMRC-6g6dDVIyWTNFg2gOpUIyp39MC-4usAIaDz_4PfkZrd5Fko6sC2noJofCWVSdu1ov1Ymm0-WnxXGeYuQk5TTzmAtPShNP8ENJRVNGHSpx8IIN2OnnYBHqSloswb-YWMqlDGnl3AwCi5P5uxcgF2X9e-Ii6dX_nu_hkSwIdK1PgLbhnNszfugH1A-xhtrFStPtgBiPIAxCimAShZ6QqYtnzXwtIfgmK4VfrrqGZOkyQxm0P8p7agE6MUAiuqogATlaXQURequ1hChG4jKtL9n37EiIxOahOmEKHMQn61DwLnGswT8SlGE7mmBMZDJSagngcNJbWnzkyte8qYCrILVIfpSNS7_JYSAYYWmUHoVMllyZRSIgMiGD-tBgyhLuj1XvCw5FX6OCSs2IZ-ZAmqSBa5J-yeIcMTKEgOBg38f29B_foMFSUcZWLre7BbkcZPhtAaN0CNE-W0Fcc2s1HzHwZCPqne5HWp4H23VAWqxBxMi4d-FqiBwle9uLoNrZmicc2s7Umczt-kBl2GzpMspqTBk8oVxS8InnEAgNBcl'></script></head>
 <body>
 
   <!-- ── Hero ── -->
   <section class="hero">
     <div class="wrap">
       <div class="hero-block">
-        <div class="hero-img-wrap">
-          <img
-            src="logo.png"
-            alt="LuckyBonus"
-            class="hero-img"
-          >
-        </div>
-        <p class="tagline">Find the Best Casino Bonuses in Seconds</p>
+        <img
+          src="logo.png"
+          alt="LuckyBonus — Find the Best Casino Bonuses in Seconds"
+          class="hero-img"
+        >
       </div>
     </div>
   </section>
