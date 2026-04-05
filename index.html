@@ -1,507 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LuckyBonus — Top Casino Bonuses</title>
-  <meta name="description" content="LuckyBonus compares top online casino bonuses, free spins and welcome offers in a premium affiliate-style layout.">
-  <style>
-    *{
-      box-sizing:border-box;
-    }
 
-    html{
-      scroll-behavior:smooth;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body{
-      margin:0;
-      font-family:Arial, sans-serif;
-      color:#fff;
-      background:
-        radial-gradient(circle at 20% 10%, rgba(255,190,70,0.18), transparent 18%),
-        radial-gradient(circle at 80% 20%, rgba(255,170,60,0.12), transparent 20%),
-        radial-gradient(circle at 50% 65%, rgba(255,210,110,0.10), transparent 22%),
-        radial-gradient(circle at 10% 80%, rgba(255,160,40,0.10), transparent 16%),
-        linear-gradient(180deg, #10091e 0%, #0a0c24 45%, #120a1f 100%);
-      min-height:100vh;
-      overflow-x:hidden;
-    }
+<title>LuckyBonus – Best Casino Bonuses</title>
 
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      background-image:
-        radial-gradient(circle, rgba(255,228,150,0.75) 0 1px, transparent 1.5px),
-        radial-gradient(circle, rgba(255,210,120,0.45) 0 1px, transparent 1.5px),
-        radial-gradient(circle, rgba(255,255,255,0.25) 0 1px, transparent 1.5px);
-      background-size:180px 180px, 260px 260px, 140px 140px;
-      background-position:0 0, 40px 80px, 90px 30px;
-      opacity:0.28;
-      z-index:0;
-    }
+<style>
 
-    a{
-      text-decoration:none;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
 
-    .container{
-      width:min(1120px, calc(100% - 36px));
-      margin:0 auto;
-      position:relative;
-      z-index:1;
-    }
+body{
+background:radial-gradient(circle at top,#2b0d3f,#0a0017);
+color:white;
+}
 
-    .topbar{
-      padding:18px 0 8px;
-    }
+/* HEADER */
 
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-      padding:16px 24px;
-      border-radius:22px;
-      background:rgba(7,10,27,0.72);
-      border:1px solid rgba(255,215,130,0.10);
-      box-shadow:0 10px 40px rgba(0,0,0,0.25);
-      backdrop-filter:blur(8px);
-    }
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(8px);
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
 
-    .brand-link{
-      display:inline-flex;
-      align-items:center;
-    }
+.brand-logo{
+height:60px;
+}
 
-    .brand-logo{
-      height:68px;
-      width:auto;
-      display:block;
-      object-fit:contain;
-    }
+nav a{
+color:white;
+margin-left:30px;
+text-decoration:none;
+font-weight:600;
+opacity:0.8;
+}
 
-    .nav-links{
-      display:flex;
-      gap:28px;
-      flex-wrap:wrap;
-    }
+nav a:hover{
+opacity:1;
+}
 
-    .nav-links a{
-      color:#d6dae8;
-      font-size:15px;
-      font-weight:700;
-    }
+/* HERO */
 
-    .hero{
-      padding:28px 0 26px;
-      text-align:center;
-    }
+.hero{
+text-align:center;
+padding:80px 20px;
+}
 
-    .hero-logo{
-      max-width:860px;
-      margin:0 auto 10px;
-      padding-top:10px;
-    }
+.hero h1{
+font-size:64px;
+margin-bottom:10px;
+}
 
-    .hero-logo-image{
-      width:min(760px, 100%);
-      height:auto;
-      display:block;
-      margin:0 auto 10px;
-      object-fit:contain;
-      filter:drop-shadow(0 0 14px rgba(255,190,70,0.10));
-    }
+.hero h1 span{
+color:#FFD700;
+}
 
-    .tagline{
-      margin:10px 0 0;
-      font-size:22px;
-      color:#f0f2f8;
-      opacity:0.96;
-      text-shadow:0 0 14px rgba(255,230,160,0.08);
-    }
+.hero p{
+opacity:0.8;
+margin-bottom:30px;
+}
 
-    .hero-cta-wrap{
-      padding:34px 0 38px;
-      text-align:center;
-    }
+.cta{
+background:#c6ff00;
+color:black;
+font-weight:700;
+padding:18px 40px;
+border-radius:12px;
+text-decoration:none;
+display:inline-block;
+font-size:20px;
+box-shadow:0 6px 0 #7fa000;
+}
 
-    .hero-cta{
-      display:inline-block;
-      padding:22px 52px;
-      border-radius:18px;
-      font-size:26px;
-      font-weight:900;
-      color:#1b1606;
-      background:linear-gradient(180deg, #dfff58 0%, #b8df2f 45%, #6fcb2e 100%);
-      box-shadow:
-        0 10px 0 rgba(80,110,20,0.45),
-        0 18px 40px rgba(255,205,90,0.20),
-        0 0 24px rgba(226,255,118,0.28);
-      border:2px solid rgba(255,243,159,0.25);
-    }
+.cta:hover{
+transform:translateY(2px);
+box-shadow:0 4px 0 #7fa000;
+}
 
-    .offers-panel{
-      margin-top:8px;
-      border-radius:28px;
-      padding:28px 18px 20px;
-      border:1px solid rgba(255,204,112,0.18);
-      background:linear-gradient(180deg, rgba(35,24,58,0.78), rgba(18,13,39,0.86));
-      box-shadow:
-        0 0 0 1px rgba(255,220,140,0.04) inset,
-        0 20px 60px rgba(0,0,0,0.26),
-        0 0 28px rgba(255,183,77,0.08);
-      backdrop-filter:blur(4px);
-    }
+/* BONUS SECTION */
 
-    .panel-title{
-      text-align:center;
-      margin:0 0 18px;
-      font-size:32px;
-      font-weight:900;
-      color:#f3d08a;
-      text-shadow:0 0 12px rgba(255,205,110,0.14);
-      position:relative;
-    }
+.section{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
 
-    .panel-title::before,
-    .panel-title::after{
-      content:"";
-      display:inline-block;
-      width:90px;
-      height:2px;
-      background:linear-gradient(90deg, transparent, rgba(243,208,138,0.9), transparent);
-      vertical-align:middle;
-      margin:0 16px;
-    }
+.section h2{
+text-align:center;
+margin-bottom:40px;
+font-size:36px;
+color:#FFD700;
+}
 
-    .offer-card{
-      display:grid;
-      grid-template-columns:150px 1fr 180px;
-      gap:20px;
-      align-items:center;
-      padding:18px;
-      margin-bottom:16px;
-      border-radius:22px;
-      background:rgba(27,20,53,0.72);
-      border:1px solid rgba(255,216,128,0.10);
-      box-shadow:0 12px 30px rgba(0,0,0,0.22);
-    }
+/* CASINO CARD */
 
-    .brand-box{
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      align-items:flex-start;
-    }
+.casino{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:rgba(0,0,0,0.35);
+border-radius:16px;
+padding:25px;
+margin-bottom:20px;
+border:1px solid rgba(255,255,255,0.1);
+}
 
-    .brand-logo-box{
-      width:140px;
-      height:92px;
-      border-radius:16px;
-      background:linear-gradient(180deg, rgba(8,8,18,0.85), rgba(18,14,35,0.95));
-      border:1px solid rgba(255,214,123,0.10);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:10px;
-      color:#f5d17e;
-      font-weight:900;
-      font-size:18px;
-      line-height:1.1;
-      box-shadow:inset 0 0 24px rgba(255,200,100,0.04);
-    }
+.casino-left{
+display:flex;
+align-items:center;
+gap:20px;
+}
 
-    .score-badge{
-      min-width:104px;
-      text-align:center;
-      padding:10px 12px;
-      border-radius:12px;
-      background:rgba(25,20,48,0.86);
-      border:1px solid rgba(255,213,120,0.08);
-      color:#fff;
-      font-size:18px;
-      font-weight:900;
-      box-shadow:0 8px 18px rgba(0,0,0,0.18);
-    }
+.logo-box{
+width:90px;
+height:90px;
+background:#140029;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+text-align:center;
+}
 
-    .score-badge span{
-      color:#f5c64b;
-      margin-right:6px;
-    }
+.rating{
+font-size:14px;
+opacity:0.8;
+}
 
-    .offer-main h3{
-      margin:0 0 8px;
-      font-size:28px;
-      line-height:1.1;
-      color:#ffffff;
-    }
+.casino-info h3{
+font-size:24px;
+margin-bottom:6px;
+}
 
-    .bonus-line{
-      margin:0 0 10px;
-      font-size:22px;
-      font-weight:900;
-      color:#f3c64c;
-      text-shadow:0 0 12px rgba(243,198,76,0.12);
-    }
+.casino-info span{
+color:#FFD700;
+font-weight:700;
+}
 
-    .offer-main p{
-      margin:0;
-      color:#d8dceb;
-      font-size:15px;
-    }
+.casino-btn{
+background:#c6ff00;
+color:black;
+padding:14px 28px;
+border-radius:10px;
+text-decoration:none;
+font-weight:700;
+box-shadow:0 5px 0 #7fa000;
+}
 
-    .card-action{
-      text-align:right;
-    }
+.casino-btn:hover{
+transform:translateY(2px);
+box-shadow:0 3px 0 #7fa000;
+}
 
-    .play-btn{
-      display:inline-block;
-      min-width:152px;
-      text-align:center;
-      padding:18px 20px;
-      border-radius:14px;
-      font-size:18px;
-      font-weight:900;
-      color:#1a1608;
-      background:linear-gradient(180deg, #e7ff51 0%, #badf2f 45%, #95d126 100%);
-      border:2px solid rgba(255,241,140,0.18);
-      box-shadow:
-        0 8px 0 rgba(84,110,20,0.40),
-        0 14px 30px rgba(210,255,90,0.14);
-    }
+/* FOOTER */
 
-    .features{
-      padding:28px 0 18px;
-    }
+footer{
+text-align:center;
+padding:40px 20px;
+opacity:0.6;
+font-size:14px;
+}
 
-    .feature-grid{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:18px;
-    }
+</style>
 
-    .feature{
-      border-radius:22px;
-      padding:22px 22px 20px;
-      background:rgba(23,17,44,0.70);
-      border:1px solid rgba(255,204,120,0.12);
-      box-shadow:0 12px 30px rgba(0,0,0,0.18);
-    }
-
-    .feature-icon{
-      font-size:30px;
-      margin-bottom:10px;
-      color:#f4c95d;
-    }
-
-    .feature h4{
-      margin:0 0 8px;
-      font-size:18px;
-      color:#f4c95d;
-    }
-
-    .feature p{
-      margin:0;
-      color:#d4d9e6;
-      font-size:15px;
-    }
-
-    .footer{
-      text-align:center;
-      padding:28px 0 44px;
-      color:#e9edf7;
-      font-size:16px;
-      position:relative;
-      z-index:1;
-    }
-
-    .footer span{
-      color:#f3c64c;
-      font-weight:800;
-    }
-
-    @media (max-width: 980px){
-      .brand-logo{
-        height:56px;
-      }
-
-      .hero-logo-image{
-        width:min(640px, 100%);
-      }
-
-      .offer-card{
-        grid-template-columns:1fr;
-        text-align:left;
-      }
-
-      .brand-box{
-        align-items:flex-start;
-      }
-
-      .card-action{
-        text-align:left;
-      }
-
-      .feature-grid{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media (max-width: 700px){
-      .nav{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-
-      .brand-logo{
-        height:48px;
-      }
-
-      .tagline{
-        font-size:18px;
-      }
-
-      .hero-cta{
-        font-size:22px;
-        padding:18px 30px;
-      }
-
-      .panel-title{
-        font-size:28px;
-      }
-
-      .panel-title::before,
-      .panel-title::after{
-        display:none;
-      }
-
-      .brand-logo-box{
-        width:100%;
-        max-width:180px;
-      }
-    }
-  </style>
 </head>
+
 <body>
 
-  <div class="topbar">
-    <div class="container">
-      <div class="nav">
-        <a href="/" class="brand-link">
-          <img src="logo.png" alt="LuckyBonus logo" class="brand-logo">
-        </a>
+<header>
 
-        <div class="nav-links">
-          <a href="#offers">Top Offers</a>
-          <a href="#benefits">Why Us</a>
-          <a href="#guide">Bonus Guide</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<a href="/">
+<img src="logo.png" class="brand-logo">
+</a>
 
-  <section class="hero">
-    <div class="container">
+<nav>
+<a href="#">Top Offers</a>
+<a href="#">Why Us</a>
+<a href="#">Bonus Guide</a>
+</nav>
 
-      <div class="hero-logo">
-        <img src="logo.png" alt="LuckyBonus logo" class="hero-logo-image">
-        <div class="tagline">Find the Best Casino Bonuses in Seconds</div>
-      </div>
+</header>
 
-      <div class="hero-cta-wrap">
-        <a href="#offers" class="hero-cta">Claim Top Bonus</a>
-      </div>
 
-      <div class="offers-panel" id="offers">
-        <h2 class="panel-title">Top Casino Bonuses</h2>
+<section class="hero">
 
-        <div class="offer-card">
-          <div class="brand-box">
-            <div class="brand-logo-box">ROYAL ACE<br>CASINO</div>
-            <div class="score-badge"><span>★</span>4.8/5</div>
-          </div>
+<h1>Lucky<span>Bonus</span></h1>
 
-          <div class="offer-main">
-            <h3>Royal Ace Casino</h3>
-            <div class="bonus-line">100% Bonus up to €500</div>
-            <p>Balanced package, fast sign-up and classic slots positioning for a broad casino audience.</p>
-          </div>
+<p>Find the Best Casino Bonuses in Seconds</p>
 
-          <div class="card-action">
-            <a href="#" class="play-btn">Claim Bonus</a>
-          </div>
-        </div>
+<a href="#" class="cta">Claim Top Bonus</a>
 
-        <div class="offer-card">
-          <div class="brand-box">
-            <div class="brand-logo-box">SpinNova</div>
-            <div class="score-badge"><span>★</span>4.7/5</div>
-          </div>
+</section>
 
-          <div class="offer-main">
-            <h3>SpinNova</h3>
-            <div class="bonus-line">200 Free Spins + €300 Bonus</div>
-            <p>Mixing extra spins with a deposit offer for players looking for stronger welcome value.</p>
-          </div>
 
-          <div class="card-action">
-            <a href="#" class="play-btn">Play Now</a>
-          </div>
-        </div>
+<section class="section">
 
-        <div class="offer-card">
-          <div class="brand-box">
-            <div class="brand-logo-box">LuckyPeak</div>
-            <div class="score-badge"><span>★</span>4.6/5</div>
-          </div>
+<h2>Top Casino Bonuses</h2>
 
-          <div class="offer-main">
-            <h3>LuckyPeak</h3>
-            <div class="bonus-line">50 Free Spins</div>
-            <p>Test top games before depositing with a lightweight offer structure and quick access.</p>
-          </div>
+<!-- CASINO 1 -->
 
-          <div class="card-action">
-            <a href="#" class="play-btn">Get Bonus</a>
-          </div>
-        </div>
+<div class="casino">
 
-      </div>
+<div class="casino-left">
 
-      <div class="features" id="benefits">
-        <div class="feature-grid">
-          <div class="feature">
-            <div class="feature-icon">🛡</div>
-            <h4>Trusted Brands</h4>
-            <p>Reviewed and presented in a clean, premium comparison layout.</p>
-          </div>
+<div class="logo-box">
+ROYAL<br>ACE
+</div>
 
-          <div class="feature">
-            <div class="feature-icon">🎁</div>
-            <h4>Fresh Promotions</h4>
-            <p>Stay updated on the most rewarding bonus formats and welcome offers.</p>
-          </div>
+<div class="casino-info">
+<h3>Royal Ace Casino</h3>
+<span>100% Bonus up to €500</span>
+<p>Balanced package with strong welcome offer.</p>
+<div class="rating">⭐ 4.8 / 5</div>
+</div>
 
-          <div class="feature">
-            <div class="feature-icon">🚀</div>
-            <h4>Fast Access</h4>
-            <p>Quickly compare offers and move directly to the selected casino brand.</p>
-          </div>
-        </div>
-      </div>
+</div>
 
-    </div>
-  </section>
+<a class="casino-btn" href="#">Claim Bonus</a>
 
-  <div class="container" id="guide">
-    <div class="footer">
-      <strong>Lucky<span>Bonus</span></strong> pro + Top Online Casino Offers
-    </div>
-  </div>
+</div>
+
+
+<!-- CASINO 2 -->
+
+<div class="casino">
+
+<div class="casino-left">
+
+<div class="logo-box">
+SpinNova
+</div>
+
+<div class="casino-info">
+<h3>SpinNova</h3>
+<span>200 Free Spins + €300 Bonus</span>
+<p>Great slot offer with extra spins.</p>
+<div class="rating">⭐ 4.7 / 5</div>
+</div>
+
+</div>
+
+<a class="casino-btn" href="#">Play Now</a>
+
+</div>
+
+
+<!-- CASINO 3 -->
+
+<div class="casino">
+
+<div class="casino-left">
+
+<div class="logo-box">
+LuckyPeak
+</div>
+
+<div class="casino-info">
+<h3>LuckyPeak</h3>
+<span>150% Bonus up to €700</span>
+<p>High value bonus for new players.</p>
+<div class="rating">⭐ 4.6 / 5</div>
+</div>
+
+</div>
+
+<a class="casino-btn" href="#">Get Bonus</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+LuckyBonus © 2026  
+18+ Gamble responsibly. Affiliate promotional website.
+
+</footer>
 
 </body>
 </html>
