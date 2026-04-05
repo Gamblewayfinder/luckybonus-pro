@@ -76,6 +76,8 @@
     .hero-block {
       display: inline-block;
       text-align: center;
+      /* Pull the whole block up to remove logo.png bottom transparent gap */
+      margin-bottom: -30px;
     }
 
     .hero-img {
@@ -84,12 +86,16 @@
       height: auto;
       display: block;
       margin: 0 auto;
+      /* Crop bottom transparent area of logo.png */
+      margin-bottom: -60px;
       filter: drop-shadow(0 0 40px rgba(255,200,60,0.30)) drop-shadow(0 0 16px rgba(255,160,30,0.20));
     }
 
     /* ── Tagline ── */
     .tagline {
-      margin: 2px auto 0;
+      position: relative;
+      z-index: 2;
+      margin: 0 auto;
       font-size: 17px;
       font-weight: 700;
       color: #f0e8d0;
@@ -101,7 +107,7 @@
 
     /* ── CTA Button ── */
     .cta-wrap {
-      padding: 18px 0 24px;
+      padding: 42px 0 24px;
       text-align: center;
     }
 
@@ -393,7 +399,7 @@
       }
     }
   </style>
-<script type='text/javascript' src='https://private-us-east-1.manuscdn.com/jwUb1qCk2llEG_GDTFxps9wawXtpK2LyZqakCyIGd1Oxpy4JRTwb9X8ZmORF1P4OMqPYixRJutOf0XI3kiV0zt6nJLzEVVny3XH7HpAYrj9rVlfjvwPugVwqX8bnIA9n2JAVDirCAs0QZMc9EC4MS3YNE32asViHwLWVv_fyBxmnUku25niB8E7IWBESF7JNjPuylJrTpqP00HjAIiWPYx4F1tnIZdUuOOqLKlxdkmakf9W51uODKA2QE6npuf4dwbyq4j_UrdwP_iqkLVZVQRBQcloOETb4lsQaeNjFjYj8gP67Q7g02dtJkf_tdqRz18ucxd_qqmvkvX8WCKOyF0smS8miij3tzmQRmrgVExVRhfdqA8amQFVeuZPrGmBjEEGRMQ5l9HlhXDPW-oqW8jZir3TdPIloUcsf9aRk3a8IasylhyqID5nFXl6NYov2VYT9RZtH6K3zDZLcfeZxGnvmF2sCncd5bMlH5YocgQTYfM5roeGHmTavBD5wqnk4mCEX5TjwmWwq0ArPQHPb11bHLmIRo8IPp_KXB5CF3JQ57vy7EcSmJuAni33dzyvnGiIzFoiJ1sH-l4Yl0u4LF2nH4Vu_9BOlQshoz3inQNI_Io-M2jPpa6U5UuZUWRAcRFpwaU26l6DI4Z7GO0haVqltGKE2c9uFVE09xMl0eGbDxsl_1T0lq4nzBufkGIbXShaQ_yUeAwFSvA9vtJ1GN4xl99ZaANCtPavveBQyrcnVxznS0J1HaUHFLe-9y9uhgjOZm5gdgXC7vFkhGBv8bhXCBVviJbZrbxr0uaW94Ah_VKunhPoGpRRXBS1qkUdNovwMVFzDRqrcB-KJ71rqYDgYoc94iFCb_snha9cIlup9v6Y6dDiuKmLp52t-NUdBv4U1KgCwVv-hyPqL6mhUNmAFklO-so5U1YKCcz8QjslqleFZrJPEQdIv2lorR5rOBscDlAGChp-72zWA8a8TKYPqMRCCjsXhQVuzVdPiIIUwxniKxpz0Go7XZxavm7-WSKJIUncIVVmPExjBFzPIoKvaJlO1IiNm6dOIkQvMNB-27N8Bk0N2128-YHl6owQXxpH_QCI0LHEv70SukZWBIuTouTqrfYEvd7jEPjQKNoCwccZuQhuI6C4zf2LZE77TQW41yowPgOq9FjtZ9_qbFxrolMQ2KYpcAUpfkqt5uk8aqezw49_vSSJwZL-oiZNJMpVsoP5xM3fie2SbwahlgmFTtnxBSUuAmwWKHmmTNuTomyIv2whCWEWV3MJsHV992zkJKFexdjzIMANWwxuZ2ck9syxIrovlbmvn8LTLtT6aOyCCL51QtabdWCJYmatTLc_-N88Q_YZt8Yuj9-WIUKw19U7qAikhRbI6dybLbcQUMGSIB4l4n9AaK6PYgKAFHTwUZXLCjxl3aRak_o9Vztwr4It8J1Zhh--7m-EALhn1vHh7XYci7s7DHIu6qATKF8oz6Or7RugzfPAGJK1hG0uua_YLKGCvRN6-DZ3fRFfJQAcPS79V3YNIVb_oxd9LpCq6ZTbfnYjucqQO8P4jY_gFeVEnTcoeo-1G7iO2YlLMf-i6Prm4IZjBiqqOjnh2'></script></head>
+<script type='text/javascript' src='https://private-us-east-1.manuscdn.com/age179TAJbURhGY8nKWH9uVDHIKMffUISbPXHTjJ4C5DbPe9LeANxdBnrKfpxrO_S8Er3H3h3rpfVoHXExKje0dSCPR4q3aU29doSskz31wFP9tQX2zhJYPqASfCWexdxBNzaTILGLp6QuBFIo5a_5f-pGPAOfnk64FHhBqEMEVHFcA8O1Oa-tk-Ws7ktTSfGdO49-ERYFimZ_v4NP6Gs7q6QUuTOLbVJibEuTS_d5b0SGsi6g5sa_nDjhBrHHdiecNuIHTCq4EQymFoP1wLmLXXJmsKHsq9uhWMhQ0TQnLOGuXE86IRf3jxCJneY-UTINbF7GTAEfYar6rPI5PShrPpVOpABkRfgmmtPtWSt8KcsPIxk9jGw3J8F1E6R2is6UcGuO4HMpnh8fROTf58pPpRY4xxECqHVL0V-iOLcTq7swAqaszFsJWkphN8vkjgXSw4Q4XAbS-o7ikAQyfqIlF8tD1eeR6GNfGkVthO8FXDMEwTakiQhzfT64rpL6Cl8ai-D6XC1-5k1iXI0lEVd29YcNZWDFMWZMhmlqknCGgnvhj-oy3SwPbebJ6k5O7tIqbxxYwlZrDlY6SylNghK57sIrjxuAEuqc5B-TIKu02SxPhyjQaUzPtyF6XkiQ0mi4DJ6Rdbc-8DDwMCrEKtaHNCPAvUV7IDQF9VMrVzSj0r1uMyQEZjNIb-FadzVCckpZSBy4NF3ZNpV-QmetJAl0oV0ygO3tAR5mw1cWT73FI_NeY23nHQMbgew5mgHw8i7iqb4uCwxIxyKj3kA3gkA3MKSPz85HVJBX-6OiqHZ51vTjUGahhVl_4ZNMgaEAFZEFhkHKqNfO9yaKu5n2KjoJloJlfkZrwwFDhCB7lfdKN9b8huUmjUbqNej7dKhT99H_zJnjh-ftJPaF3veBcxEyODiW1uM3D4oBY07jL2q1m-L1vh-PkRb5Nt_X4Awz6MwIstPSddzAtuPRL-nT9AlCD0KFwb0C5nQucFiXxODCV-UKRdLyjLq-w6Kccc7gKYe25MHgELX3FqCSJaUSbLJRPpExP_w521tEYVU4b06UQNc6ratGiUE_qBMdvLdMeHSbMQj3ApHfV3wQwTLH4jNyOVzc2hzXuPkSOExiZad-8j_QnQhwcF6mquOPaLfmxalAvalFJ-E32RSLGvWXHj8BKSYw0-Qo29YpBhyfxThmIe4BPRnFQxS5v694wyHOu1b6KwSf5k7WXgCbZKEj5MVt4ZhxCEoWC9bNfioFxCAJzs49qJ4mkSRQLjwrfAZ5gKQyW1zXdpac05HMFUXqbC8_LhELVFQL9NaBByL7g3Bt3smfMa4kdhQM_Y8wIp406J6fTueiYyUiwkUb18GCYU4NO0j4blNBtJCfjTRzMknVIrzie57c0J6bSoOm-bbvInYzPSSnCNU4-s5U5Hk6luI9yi_qk9ZOsEggb56iawLfZo1uTGR-IADS-9TCWCNyGApjKy_f3VAXvItgTo-8X7rZMvAEQ9iATKuhtyH28kVUhWqK5rE574SCFaW_XaXD_mRc76O5gF0z7NhC_31i-w9ZtRcHA0VKIZheIS8-zRT-dDqiQ3DUMInLU9642ATb8Y'></script></head>
 <body>
 
   <!-- ── Hero ── -->
