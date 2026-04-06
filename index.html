@@ -162,6 +162,7 @@
 
     /* ── Casino Card ── */
     .card {
+      position:relative;
       display: grid;
       grid-template-columns: 110px 1fr auto;
       gap: 14px;
@@ -381,6 +382,17 @@
       .tagline {
         font-size: 16px;
       }
+      .top-badge{
+  position:absolute;
+  top:-10px;
+  left:20px;
+  background:linear-gradient(180deg,#ffd95a,#f0b800);
+  color:#1a0a08;
+  font-weight:900;
+  font-size:12px;
+  padding:6px 12px;
+  border-radius:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
     }
   </style>
 </head>
@@ -411,11 +423,13 @@
     <div class="wrap">
       <div class="panel">
         <h2 class="panel-title">Top Casino Bonuses</h2>
+        <div class="updated">Updated Today • Expert Reviewed</div>
 
       
 <!-- Card 1 -->
 <div class="card">
-  <div class="logo-box">
+<div class="top-badge">#1 Recommended</div>
+    <div class="logo-box"> 
     <div class="logo-img-wrap">
       <div class="logo-text-fallback">Corgibet</div>
     </div>
