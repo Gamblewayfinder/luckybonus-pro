@@ -18,7 +18,6 @@
       color: #ffffff;
       min-height: 100vh;
       overflow-x: hidden;
-      /* Rich dark purple-brown base — matches the reference */
       background:
         radial-gradient(ellipse at 50% 0%,   rgba(255,160,40,0.22) 0%, transparent 55%),
         radial-gradient(ellipse at 15% 25%,  rgba(255,130,30,0.16) 0%, transparent 40%),
@@ -28,7 +27,6 @@
         linear-gradient(180deg, #1a0a08 0%, #1e0c0a 30%, #200e14 60%, #1c0a20 100%);
     }
 
-    /* ── Starfield with gold sparkles ── */
     body::before {
       content: "";
       position: fixed;
@@ -45,7 +43,6 @@
       opacity: 0.45;
     }
 
-    /* ── Gold glow orbs ── */
     body::after {
       content: "";
       position: fixed;
@@ -61,13 +58,12 @@
     a { text-decoration: none; color: inherit; }
 
     .wrap {
-      width: min(520px, calc(100% - 24px));
+      width: min(920px, calc(100% - 24px));
       margin: 0 auto;
       position: relative;
       z-index: 1;
     }
 
-    /* ── Hero ── */
     .hero {
       padding: 28px 0 0;
       text-align: center;
@@ -78,8 +74,6 @@
       text-align: center;
     }
 
-    /* logo.png now has tagline baked in and is cropped to 1536x730.
-       The image aspect ratio is 1536/730 = 2.1:1 */
     .hero-img {
       width: 100%;
       max-width: 500px;
@@ -89,13 +83,11 @@
       filter: drop-shadow(0 0 40px rgba(255,200,60,0.30)) drop-shadow(0 0 16px rgba(255,160,30,0.20));
     }
 
-    /* ── CTA Button ── */
     .cta-wrap {
       padding: 16px 0 24px;
       text-align: center;
     }
 
-    /* Correct green matching the reference — darker, richer green */
     .cta-btn {
       display: inline-block;
       padding: 18px 56px;
@@ -127,7 +119,6 @@
       box-shadow: 0 3px 0 rgba(20,70,0,0.55);
     }
 
-    /* ── Offers Panel ── */
     .panel {
       border-radius: 24px;
       padding: 24px 16px 18px;
@@ -160,9 +151,16 @@
       max-width: 80px;
     }
 
-    /* ── Casino Card ── */
+    .updated {
+      text-align: left;
+      font-size: 15px;
+      font-weight: 700;
+      color: #d7d9e8;
+      margin-bottom: 14px;
+    }
+
     .card {
-      position:relative;
+      position: relative;
       display: grid;
       grid-template-columns: 110px 1fr auto;
       gap: 14px;
@@ -183,7 +181,20 @@
       box-shadow: 0 10px 32px rgba(0,0,0,0.32), 0 0 18px rgba(255,200,80,0.10);
     }
 
-    /* Logo box */
+    .top-badge {
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      background: linear-gradient(180deg, #ffd95a, #f0b800);
+      color: #1a0a08;
+      font-weight: 900;
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 2;
+    }
+
     .logo-box {
       display: flex;
       flex-direction: column;
@@ -230,7 +241,6 @@
 
     .rating .star { color: #f5c518; font-size: 16px; }
 
-    /* Card info */
     .card-info { min-width: 0; }
 
     .card-name {
@@ -253,13 +263,15 @@
       line-height: 1.4;
     }
 
-    /* Action */
-    .card-action { text-align: right; flex-shrink: 0; }
+    .card-action {
+      text-align: right;
+      flex-shrink: 0;
+    }
 
     .play-btn {
       display: inline-block;
       padding: 13px 18px;
-      min-width: 120px;
+      min-width: 130px;
       text-align: center;
       border-radius: 12px;
       font-size: 15px;
@@ -282,9 +294,10 @@
         0 14px 28px rgba(60,180,0,0.25);
     }
 
-    .play-btn:active { transform: translateY(2px); }
+    .play-btn:active {
+      transform: translateY(2px);
+    }
 
-    /* ── Trust Features ── */
     .features {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -319,7 +332,6 @@
       line-height: 1.45;
     }
 
-    /* ── Footer ── */
     .footer {
       text-align: center;
       padding: 24px 0 36px;
@@ -336,8 +348,11 @@
       line-height: 1.5;
     }
 
-    /* ── Responsive ── */
-    @media (max-width: 480px) {
+    @media (max-width: 700px) {
+      .wrap {
+        width: min(100%, calc(100% - 20px));
+      }
+
       .card {
         grid-template-columns: 90px 1fr;
         grid-template-rows: auto auto;
@@ -379,26 +394,17 @@
         padding: 16px 36px;
       }
 
-      .tagline {
-        font-size: 16px;
+      .top-badge {
+        top: -10px;
+        left: 14px;
+        font-size: 11px;
+        padding: 5px 10px;
       }
-      .top-badge{
-  position:absolute;
-  top:-10px;
-  left:20px;
-  background:linear-gradient(180deg,#ffd95a,#f0b800);
-  color:#1a0a08;
-  font-weight:900;
-  font-size:12px;
-  padding:6px 12px;
-  border-radius:20px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.3);
     }
   </style>
 </head>
 <body>
 
-  <!-- ── Hero ── -->
   <section class="hero">
     <div class="wrap">
       <div class="hero-block">
@@ -411,104 +417,96 @@
     </div>
   </section>
 
-  <!-- ── CTA ── -->
   <div class="cta-wrap">
     <div class="wrap">
       <a href="#offers" class="cta-btn">Claim Top Bonus</a>
     </div>
   </div>
 
-  <!-- ── Offers Panel ── -->
   <section id="offers">
     <div class="wrap">
       <div class="panel">
         <h2 class="panel-title">Top Casino Bonuses</h2>
         <div class="updated">Updated Today • Expert Reviewed</div>
 
-      
-<!-- Card 1 -->
-<div class="card">
-<div class="top-badge">#1 Recommended</div>
-    <div class="logo-box"> 
-    <div class="logo-img-wrap">
-      <div class="logo-text-fallback">Corgibet</div>
-    </div>
-    <div class="rating">
-      <span class="star">★</span> 4.8/5
-    </div>
-  </div>
-  <div class="card-info">
-    <div class="card-name">Corgibet</div>
-    <div class="card-bonus">Top Casino Offer for DE / AT / NO</div>
-    <div class="card-desc">Strong welcome offer with a clean signup flow and broad appeal for casino players.</div>
-  </div>
-  <div class="card-action">
-    <a href="https://track.coolaffs.com/visit/?bta=37155&nci=5377&Afp10=Seo" class="play-btn" target="_blank" rel="nofollow">Claim Bonus</a>
-  </div>
-</div>
+        <div class="card">
+          <div class="top-badge">#1 Recommended</div>
+          <div class="logo-box">
+            <div class="logo-img-wrap">
+              <div class="logo-text-fallback">Corgibet</div>
+            </div>
+            <div class="rating">
+              <span class="star">★</span> 4.8/5
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-name">Corgibet</div>
+            <div class="card-bonus">Top Casino Offer for DE / AT / NO</div>
+            <div class="card-desc">Strong welcome offer with a clean signup flow and broad appeal for casino players.</div>
+          </div>
+          <div class="card-action">
+            <a href="https://track.coolaffs.com/visit/?bta=37155&nci=5377&Afp10=Seo" class="play-btn" target="_blank" rel="nofollow">Claim Bonus</a>
+          </div>
+        </div>
 
-<!-- Card 2 -->
-<div class="card">
-  <div class="logo-box">
-    <div class="logo-img-wrap">
-      <div class="logo-text-fallback">Magneticslots</div>
-    </div>
-    <div class="rating">
-      <span class="star">★</span> 4.7/5
-    </div>
-  </div>
-  <div class="card-info">
-    <div class="card-name">Magneticslots</div>
-    <div class="card-bonus">Featured Slots Offer for DE / AT</div>
-    <div class="card-desc">Bonus-driven casino brand focused on slots players and fast access to promotional offers.</div>
-  </div>
-  <div class="card-action">
-    <a href="https://track.coolaffs.com/visit/?bta=37155&nci=5416&Afp10=Seo" class="play-btn" target="_blank" rel="nofollow">Play Now</a>
-  </div>
-</div>
+        <div class="card">
+          <div class="logo-box">
+            <div class="logo-img-wrap">
+              <div class="logo-text-fallback">Magneticslots</div>
+            </div>
+            <div class="rating">
+              <span class="star">★</span> 4.7/5
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-name">Magneticslots</div>
+            <div class="card-bonus">Featured Slots Offer for DE / AT</div>
+            <div class="card-desc">Bonus-driven casino brand focused on slots players and fast access to promotional offers.</div>
+          </div>
+          <div class="card-action">
+            <a href="https://track.coolaffs.com/visit/?bta=37155&nci=5416&Afp10=Seo" class="play-btn" target="_blank" rel="nofollow">Claim Bonus</a>
+          </div>
+        </div>
 
-<!-- Card 3 -->
-<div class="card">
-  <div class="logo-box">
-    <div class="logo-img-wrap">
-      <div class="logo-text-fallback">Slotuna</div>
-    </div>
-    <div class="rating">
-      <span class="star">★</span> 4.6/5
-    </div>
-  </div>
-  <div class="card-info">
-    <div class="card-name">Slotuna</div>
-    <div class="card-bonus">SEO Offer • DE • Min Deposit €10</div>
-    <div class="card-desc">Designed for casino traffic with a simple registration flow and competitive entry point.</div>
-  </div>
-  <div class="card-action">
-    <a href="https://beardorbit.com/api/v3/offer/4810?aff_sub3=sltseode&affiliate_id=2526&url_id=7929" class="play-btn" target="_blank" rel="nofollow">Get Offer</a>
-  </div>
-</div>
+        <div class="card">
+          <div class="logo-box">
+            <div class="logo-img-wrap">
+              <div class="logo-text-fallback">Slotuna</div>
+            </div>
+            <div class="rating">
+              <span class="star">★</span> 4.6/5
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-name">Slotuna</div>
+            <div class="card-bonus">SEO Offer • DE • Min Deposit €10</div>
+            <div class="card-desc">Designed for casino traffic with a simple registration flow and competitive entry point.</div>
+          </div>
+          <div class="card-action">
+            <a href="https://beardorbit.com/api/v3/offer/4810?aff_sub3=sltseode&affiliate_id=2526&url_id=7929" class="play-btn" target="_blank" rel="nofollow">Claim Bonus</a>
+          </div>
+        </div>
 
-<!-- Card 4 -->
-<div class="card">
-  <div class="logo-box">
-    <div class="logo-img-wrap">
-      <div class="logo-text-fallback">Sportuna</div>
-    </div>
-    <div class="rating">
-      <span class="star">★</span> 4.5/5
-    </div>
-  </div>
-  <div class="card-info">
-    <div class="card-name">Sportuna</div>
-    <div class="card-bonus">SEO Offer • DE • Min Deposit €10</div>
-    <div class="card-desc">Balanced offer with a straightforward signup path and strong fit for bonus-focused users.</div>
-  </div>
-  <div class="card-action">
-    <a href="https://beardorbit.com/api/v3/offer/4811?aff_sub3=sprseode&affiliate_id=2526&url_id=7930" class="play-btn" target="_blank" rel="nofollow">Claim Bonus</a>
-  </div>
-</div>
-      </div><!-- /panel -->
+        <div class="card">
+          <div class="logo-box">
+            <div class="logo-img-wrap">
+              <div class="logo-text-fallback">Sportuna</div>
+            </div>
+            <div class="rating">
+              <span class="star">★</span> 4.5/5
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-name">Sportuna</div>
+            <div class="card-bonus">SEO Offer • DE • Min Deposit €10</div>
+            <div class="card-desc">Balanced offer with a straightforward signup path and strong fit for bonus-focused users.</div>
+          </div>
+          <div class="card-action">
+            <a href="https://beardorbit.com/api/v3/offer/4811?aff_sub3=sprseode&affiliate_id=2526&url_id=7930" class="play-btn" target="_blank" rel="nofollow">Claim Bonus</a>
+          </div>
+        </div>
+      </div>
 
-      <!-- ── Trust Features ── -->
       <div class="features">
         <div class="feat">
           <span class="feat-icon">🛡️</span>
@@ -526,11 +524,9 @@
           <p>Quickly compare offers and claim rewards</p>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ── Footer ── -->
   <footer class="footer">
     <div class="wrap">
       <div><strong>LuckyBonus</strong>.pro + Top Online Casino Offers</div>
