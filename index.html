@@ -1,544 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LuckyBonus.pro — Best Casino Bonuses 2026</title>
-  <meta name="description" content="Find the best online casino bonuses in seconds. Expert-reviewed rankings, exclusive welcome offers and free spins.">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
-  <link rel="apple-touch-icon" href="/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Nunito', Arial, sans-serif;
-      color: #ffffff;
-      min-height: 100vh;
-      overflow-x: hidden;
-      background:
-        radial-gradient(ellipse at 50% 0%,   rgba(255,160,40,0.22) 0%, transparent 55%),
-        radial-gradient(ellipse at 15% 25%,  rgba(255,130,30,0.16) 0%, transparent 40%),
-        radial-gradient(ellipse at 85% 20%,  rgba(255,140,50,0.14) 0%, transparent 38%),
-        radial-gradient(ellipse at 50% 60%,  rgba(200,80,255,0.08) 0%, transparent 45%),
-        radial-gradient(ellipse at 50% 100%, rgba(255,120,20,0.12) 0%, transparent 50%),
-        linear-gradient(180deg, #1a0a08 0%, #1e0c0a 30%, #200e14 60%, #1c0a20 100%);
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      background-image:
-        radial-gradient(circle, rgba(255,220,130,0.80) 0 1px, transparent 1.5px),
-        radial-gradient(circle, rgba(255,200,100,0.50) 0 1px, transparent 1.5px),
-        radial-gradient(circle, rgba(255,240,180,0.35) 0 1px, transparent 1.5px),
-        radial-gradient(circle, rgba(255,255,220,0.20) 0 1px, transparent 1.5px);
-      background-size: 130px 130px, 200px 200px, 280px 280px, 350px 350px;
-      background-position: 0 0, 45px 65px, 100px 30px, 170px 110px;
-      opacity: 0.45;
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      background:
-        radial-gradient(ellipse 300px 200px at 20% 80%, rgba(255,160,40,0.10) 0%, transparent 100%),
-        radial-gradient(ellipse 250px 180px at 80% 70%, rgba(255,140,30,0.08) 0%, transparent 100%),
-        radial-gradient(ellipse 400px 120px at 50% 100%, rgba(255,180,60,0.12) 0%, transparent 100%);
-    }
-
-    a { text-decoration: none; color: inherit; }
-
-    .wrap {
-      width: min(920px, calc(100% - 24px));
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero {
-      padding: 28px 0 0;
-      text-align: center;
-    }
-
-    .hero-block {
-      display: inline-block;
-      text-align: center;
-    }
-
-    .hero-img {
-      width: 100%;
-      max-width: 500px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      filter: drop-shadow(0 0 40px rgba(255,200,60,0.30)) drop-shadow(0 0 16px rgba(255,160,30,0.20));
-    }
-
-    .cta-wrap {
-      padding: 16px 0 24px;
-      text-align: center;
-    }
-
-    .cta-btn {
-      display: inline-block;
-      padding: 18px 56px;
-      border-radius: 14px;
-      font-size: 22px;
-      font-weight: 900;
-      color: #0a1800;
-      background: linear-gradient(180deg, #5ecb2a 0%, #3fa814 50%, #2e8a0a 100%);
-      border: 2px solid rgba(180,255,120,0.30);
-      box-shadow:
-        0 6px 0 rgba(20,70,0,0.55),
-        0 14px 32px rgba(60,180,0,0.25),
-        0 0 24px rgba(80,200,20,0.20);
-      letter-spacing: 0.02em;
-      transition: transform 0.15s, box-shadow 0.15s;
-      font-family: 'Nunito', Arial, sans-serif;
-    }
-
-    .cta-btn:hover {
-      transform: translateY(-2px);
-      box-shadow:
-        0 8px 0 rgba(20,70,0,0.55),
-        0 18px 36px rgba(60,180,0,0.35),
-        0 0 32px rgba(80,200,20,0.28);
-    }
-
-    .cta-btn:active {
-      transform: translateY(2px);
-      box-shadow: 0 3px 0 rgba(20,70,0,0.55);
-    }
-
-    .panel {
-      border-radius: 24px;
-      padding: 24px 16px 18px;
-      background: linear-gradient(180deg, rgba(28,12,52,0.88) 0%, rgba(18,6,36,0.94) 100%);
-      border: 1px solid rgba(255,210,120,0.22);
-      box-shadow:
-        0 0 0 1px rgba(255,220,150,0.05) inset,
-        0 20px 60px rgba(0,0,0,0.35),
-        0 0 50px rgba(255,180,60,0.09);
-    }
-
-    .panel-title {
-      text-align: center;
-      font-size: 26px;
-      font-weight: 900;
-      color: #f0cc6e;
-      margin-bottom: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-    }
-
-    .panel-title::before,
-    .panel-title::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(240,204,110,0.75), transparent);
-      max-width: 80px;
-    }
-
-    .updated {
-      text-align: left;
-      font-size: 15px;
-      font-weight: 700;
-      color: #d7d9e8;
-      margin-bottom: 14px;
-    }
-
-    .card {
-      position: relative;
-      display: grid;
-      grid-template-columns: 110px 1fr auto;
-      gap: 14px;
-      align-items: center;
-      padding: 14px;
-      margin-bottom: 12px;
-      border-radius: 18px;
-      background: rgba(14,6,28,0.82);
-      border: 1px solid rgba(255,215,120,0.12);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .card:last-child { margin-bottom: 0; }
-
-    .card:hover {
-      border-color: rgba(255,215,120,0.32);
-      box-shadow: 0 10px 32px rgba(0,0,0,0.32), 0 0 18px rgba(255,200,80,0.10);
-    }
-
-    .top-badge {
-      position: absolute;
-      top: -10px;
-      left: 20px;
-      background: linear-gradient(180deg, #ffd95a, #f0b800);
-      color: #1a0a08;
-      font-weight: 900;
-      font-size: 12px;
-      padding: 6px 12px;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      z-index: 2;
-    }
-
-    .logo-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .logo-img-wrap {
-      width: 96px;
-      height: 64px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #0a0618 0%, #180c38 100%);
-      border: 1px solid rgba(255,210,120,0.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .logo-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      padding: 6px;
-    }
-
-    .logo-text-fallback {
-      color: #f0c860;
-      font-weight: 900;
-      font-size: 13px;
-      text-align: center;
-      line-height: 1.15;
-      padding: 8px;
-    }
-
-    .rating {
-      font-size: 15px;
-      font-weight: 800;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .rating .star { color: #f5c518; font-size: 16px; }
-
-    .card-info { min-width: 0; }
-
-    .card-name {
-      font-size: 18px;
-      font-weight: 900;
-      color: #ffffff;
-      margin-bottom: 4px;
-    }
-
-    .card-bonus {
-      font-size: 15px;
-      font-weight: 800;
-      color: #f3c84c;
-      margin-bottom: 5px;
-    }
-
-    .card-desc {
-      font-size: 13px;
-      color: #c8cce0;
-      line-height: 1.4;
-    }
-
-    .card-action {
-      text-align: right;
-      flex-shrink: 0;
-    }
-
-    .play-btn {
-      display: inline-block;
-      padding: 13px 18px;
-      min-width: 130px;
-      text-align: center;
-      border-radius: 12px;
-      font-size: 15px;
-      font-weight: 900;
-      color: #0a1800;
-      background: linear-gradient(180deg, #5ecb2a 0%, #3fa814 50%, #2e8a0a 100%);
-      border: 2px solid rgba(180,255,120,0.25);
-      box-shadow:
-        0 5px 0 rgba(20,70,0,0.50),
-        0 10px 20px rgba(60,180,0,0.15);
-      transition: transform 0.15s, box-shadow 0.15s;
-      white-space: nowrap;
-      font-family: 'Nunito', Arial, sans-serif;
-    }
-
-    .play-btn:hover {
-      transform: translateY(-2px);
-      box-shadow:
-        0 7px 0 rgba(20,70,0,0.50),
-        0 14px 28px rgba(60,180,0,0.25);
-    }
-
-    .play-btn:active {
-      transform: translateY(2px);
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .feat {
-      border-radius: 16px;
-      padding: 18px 14px;
-      background: rgba(16,8,32,0.80);
-      border: 1px solid rgba(255,205,120,0.12);
-      text-align: center;
-    }
-
-    .feat-icon {
-      font-size: 28px;
-      margin-bottom: 8px;
-      display: block;
-    }
-
-    .feat h4 {
-      font-size: 14px;
-      font-weight: 800;
-      color: #f0cc6e;
-      margin-bottom: 6px;
-    }
-
-    .feat p {
-      font-size: 12px;
-      color: #c0c4da;
-      line-height: 1.45;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 24px 0 36px;
-      font-size: 15px;
-      color: #e0e4f4;
-    }
-
-    .footer strong { color: #f3c84c; }
-
-    .footer-note {
-      margin-top: 8px;
-      font-size: 11px;
-      color: #7a7e96;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 700px) {
-      .wrap {
-        width: min(100%, calc(100% - 20px));
-      }
-
-      .card {
-        grid-template-columns: 90px 1fr;
-        grid-template-rows: auto auto;
-      }
-
-      .logo-box {
-        grid-row: 1;
-        grid-column: 1;
-      }
-
-      .card-info {
-        grid-row: 1;
-        grid-column: 2;
-      }
-
-      .card-action {
-        grid-row: 2;
-        grid-column: 1 / -1;
-        text-align: center;
-      }
-
-      .play-btn {
-        width: 100%;
-        padding: 14px;
-        font-size: 16px;
-      }
-
-      .logo-img-wrap {
-        width: 80px;
-        height: 54px;
-      }
-
-      .features {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-btn {
-        font-size: 19px;
-        padding: 16px 36px;
-      }
-
-      .top-badge {
-        top: -10px;
-        left: 14px;
-        font-size: 11px;
-        padding: 5px 10px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuckyBonus.pro | Top Casino Bonuses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .casino-card { transition: transform 0.3s ease; }
+        .casino-card:hover { transform: translateY(-5px ); }
+        .gradient-bg { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+    </style>
 </head>
-<body>
-
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-block">
-        <img
-          src="logo.png"
-          alt="LuckyBonus — Find the Best Casino Bonuses in Seconds"
-          class="hero-img"
-        >
-      </div>
-    </div>
-  </section>
-
-  <div class="cta-wrap">
-    <div class="wrap">
-      <a href="#offers" class="cta-btn">Claim Top Bonus</a>
-    </div>
-  </div>
-
-  <section id="offers">
-    <div class="wrap">
-      <div class="panel">
-        <h2 class="panel-title">Top Casino Bonuses</h2>
-        <div class="updated">Updated Today • Expert Reviewed</div>
-
-        <div class="card">
-          <div class="top-badge">#1 Recommended</div>
-          <div class="logo-box">
-            <div class="logo-img-wrap">
-              <div class="logo-text-fallback">LolyBet</div>
+<body class="bg-slate-900 text-white font-sans">
+    <!-- Header -->
+    <header class="py-6 px-4 border-b border-slate-800 gradient-bg">
+        <div class="max-auto max-w-6xl flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-yellow-500 rounded-lg flex items-center justify-center text-slate-900 font-bold text-xl">LB</div>
+                <span class="text-2xl font-bold tracking-tight">LuckyBonus<span class="text-yellow-500">.pro</span></span>
             </div>
-            <div class="rating">
-              <span class="star">★</span> 4.8/5
-            </div>
-          </div>
-          <div class="card-info">
-            <div class="card-name">LolyBet</div>
-            <div class="card-bonus">Top Offer • FR / DE / IT / CA / ES / PT • CPA €100</div>
-            <div class="card-desc">Multi-market casino brand with strong bonus offers and broad European coverage including France, Germany and Italy.</div>
-          </div>
-          <div class="card-action">
-            <a href="https://www.lolly-bet888.com?faff=843" class="play-btn" target="_blank" rel="nofollow">Claim Bonus</a>
-          </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
+                <a href="#" class="hover:text-white transition">CASINOS</a>
+                <a href="#" class="hover:text-white transition">BONUSES</a>
+                <a href="#" class="hover:text-white transition">REVIEWS</a>
+                <a href="#" class="hover:text-white transition">GUIDES</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 px-4 text-center bg-slate-900">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Find Your <span class="text-yellow-500">Perfect Casino</span></h1>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">We test and verify the best online casino bonuses so you don't have to. Play safe, play smart.</p>
+    </section>
+
+    <!-- Casino List -->
+    <main class="max-w-6xl mx-auto px-4 pb-20">
+        <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl font-bold">Top Casino Bonuses</h2>
+            <div class="text-sm text-slate-500">Updated: May 2026</div>
         </div>
 
-        <div class="card">
-          <div class="logo-box">
-            <div class="logo-img-wrap">
-              <div class="logo-text-fallback">The StakeHouse</div>
+        <div class="space-y-4">
+            <!-- Casino 1: LolyBet -->
+            <div class="casino-card bg-slate-800 rounded-2xl p-4 md:p-6 flex flex-col md:flex-row items-center justify-between border border-slate-700">
+                <div class="flex items-center space-x-6 w-full md:w-1/3">
+                    <div class="text-3xl font-bold text-slate-600">#1</div>
+                    <div class="w-20 h-20 bg-indigo-600 rounded-xl flex items-center justify-center text-2xl font-bold">LB</div>
+                    <div>
+                        <h3 class="text-xl font-bold">LolyBet</h3>
+                        <div class="flex space-x-1 mt-1">
+                            <i class="fas fa-star text-yellow-500 text-xs"></i>
+                            <i class="fas fa-star text-yellow-500 text-xs"></i>
+                            <i class="fas fa-star text-yellow-500 text-xs"></i>
+                            <i class="fas fa-star text-yellow-500 text-xs"></i>
+                            <i class="fas fa-star text-yellow-500 text-xs"></i>
+                        </div>
+                        <span class="inline-block mt-2 px-2 py-1 bg-green-500/10 text-green-500 text-[10px] font-bold rounded uppercase tracking-wider">Top Rated</span>
+                    </div>
+                </div>
+                <div class="my-6 md:my-0 text-center md:text-left w-full md:w-1/3">
+                    <div class="text-slate-400 text-sm uppercase font-bold tracking-widest mb-1">Exclusive Bonus</div>
+                    <div class="text-2xl font-black text-white">100% UP TO €500</div>
+                    <div class="text-slate-500 text-xs mt-1">FR / DE / IT / CA Accepted</div>
+                </div>
+                <div class="w-full md:w-1/4 flex flex-col space-y-3">
+                    <a href="#" class="bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-3 px-8 rounded-xl text-center transition shadow-lg shadow-yellow-500/20">CLAIM BONUS</a>
+                    <a href="#" class="text-slate-500 text-xs text-center hover:text-white transition underline">Read Full Review</a>
+                </div>
             </div>
-            <div class="rating">
-              <span class="star">★</span> 4.7/5
+
+            <!-- Casino 2: CorgiBet -->
+            <div class="casino-card bg-slate-800 rounded-2xl p-4 md:p-6 flex flex-col md:flex-row items-center justify-between border border-slate-700">
+                <div class="flex items-center space-x-6 w-full md:w-1/3">
+                    <div class="text-3xl font-bold text-slate-600">#2</div>
+                    <div class="w-20 h-20 bg-orange-500 rounded-xl flex items-center justify-center text-2xl font-bold">CB</div>
+                    <div>
+                        <h3 class="text-xl font-bold">CorgiBet</h3>
+                        <div class="flex space-x-1 mt-1">
+                            <i class="fas fa-star text-yellow-500 text-xs"></i>
+                            <i class="fas fa-star text-yellow-500 text-xs"></i>
+                            <i class="fas fa-star text-yellow-500 text-xs"></i>
+                            <i class="fas fa-star text-yellow-500 text-xs"></i>
+                            <i class="fas fa-star-half-alt text-yellow-500 text-xs"></i>
+                        </div>
+                        <span class="inline-block mt-2 px-2 py-1 bg-orange-500/10 text-orange-500 text-[10px] font-bold rounded uppercase tracking-wider">Hot Pick</span>
+                    </div>
+                </div>
+                <div class="my-6 md:my-0 text-center md:text-left w-full md:w-1/3">
+                    <div class="text-slate-400 text-sm uppercase font-bold tracking-widest mb-1">Welcome Offer</div>
+                    <div class="text-2xl font-black text-white">200% + 50 FREE SPINS</div>
+                    <div class="text-slate-500 text-xs mt-1">Fast Payouts • Crypto Friendly</div>
+                </div>
+                <div class="w-full md:w-1/4 flex flex-col space-y-3">
+                    <a href="https://track.coolaffs.com/visit/?bta=37155&nci=5377&Afp10=Seo" class="bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-3 px-8 rounded-xl text-center transition shadow-lg shadow-yellow-500/20">CLAIM BONUS</a>
+                    <a href="#" class="text-slate-500 text-xs text-center hover:text-white transition underline">Read Full Review</a>
+                </div>
             </div>
-          </div>
-          <div class="card-info">
-            <div class="card-name">The StakeHouse</div>
-            <div class="card-bonus">Top Offer • NO / FI / CA / SE / DE / FR / IE</div>
-            <div class="card-desc">Premium casino brand targeting Nordic and European markets with competitive offers and a smooth player experience.</div>
-          </div>
-          <div class="card-action">
-            <a href="https://thestakehouse.io/?igst=191e1c56bcece77b3ba0c8f12444bb58&faff=245" class="play-btn" target="_blank" rel="nofollow">Claim Bonus</a>
-          </div>
+
+            <!-- Casino 3: Wild Casino (NEW from Vipin ) -->
+            <div class="casino-card bg-slate-800 rounded-2xl p-4 md:p-6 flex flex-col md:flex-row items-center justify-between border border-yellow-500/30 bg-yellow-500/5">
+                <div class="flex items-center space-x-6 w-full md:w-1/3">
+                    <div class="text-3xl font-bold text-slate-600">#3</div>
+                    <div class="w-20 h-20 bg-green-600 rounded-xl flex items-center justify-center text-2xl font-bold">WC</div>
+                    <div>
+                        <h3 class="text-xl font-bold">Wild Casino</h3>
+                        <div class="flex space-x-1 mt-1">
+                            <i class="fas fa-star text-yellow-500 text-xs"></i>
+                            <i class="fas fa-star text-yellow-500 text-xs"></i>
+                            <i class="fas fa-star text-yellow-500 text-xs"></i>
+                            <i class="fas fa-star text-yellow-500 text-xs"></i>
+                            <i class="fas fa-star text-yellow-500 text-xs"></i>
+                        </div>
+                        <span class="inline-block mt-2 px-2 py-1 bg-green-500/10 text-green-500 text-[10px] font-bold rounded uppercase tracking-wider">Best for Canada</span>
+                    </div>
+                </div>
+                <div class="my-6 md:my-0 text-center md:text-left w-full md:w-1/3">
+                    <div class="text-slate-400 text-sm uppercase font-bold tracking-widest mb-1">Huge Welcome Package</div>
+                    <div class="text-2xl font-black text-white">$5,000 BONUS</div>
+                    <div class="text-slate-500 text-xs mt-1">$9,000 Crypto Bonus Available</div>
+                </div>
+                <div class="w-full md:w-1/4 flex flex-col space-y-3">
+                    <a href="#" class="bg-green-500 hover:bg-green-400 text-white font-bold py-3 px-8 rounded-xl text-center transition shadow-lg shadow-green-500/20">CLAIM BONUS</a>
+                    <a href="#" class="text-slate-500 text-xs text-center hover:text-white transition underline">Read Full Review</a>
+                </div>
+            </div>
         </div>
 
-        <div class="card">
-          <div class="logo-box">
-            <div class="logo-img-wrap">
-              <div class="logo-text-fallback">Casino148</div>
-            </div>
-            <div class="rating">
-              <span class="star">★</span> 4.6/5
-            </div>
-          </div>
-          <div class="card-info">
-            <div class="card-name">Casino148</div>
-            <div class="card-bonus">Top Offer • DE / AT / CH / BE / FR / ES</div>
-            <div class="card-desc">Established casino brand covering key European markets with a clean registration flow and strong bonus presentation.</div>
-          </div>
-          <div class="card-action">
-            <a href="https://casino148.track360.io/Tracking/click/?affid=2112&campaign=1208&product_id=1&t_type=RegistrationPage&t_lang=EN" class="play-btn" target="_blank" rel="nofollow">Claim Bonus</a>
-          </div>
+        <!-- Footer Note -->
+        <div class="mt-12 p-6 bg-slate-800/50 rounded-2xl border border-slate-700 text-center">
+            <p class="text-slate-500 text-xs leading-relaxed">
+                18+ | Play Responsibly | Terms & Conditions Apply. Gambling can be addictive. Please play within your limits. 
+                If you or someone you know has a gambling problem, please seek help from professional organizations.
+            </p>
         </div>
+    </main>
 
-        <div class="card">
-          <div class="logo-box">
-            <div class="logo-img-wrap">
-              <div class="logo-text-fallback">Magneticslots</div>
-            </div>
-            <div class="rating">
-              <span class="star">★</span> 4.5/5
-            </div>
-          </div>
-          <div class="card-info">
-            <div class="card-name">Magneticslots</div>
-            <div class="card-bonus">Slots Offer • DE / AT / FI</div>
-            <div class="card-desc">Bonus-driven slots brand focused on German and Nordic markets with fast access to promotional offers.</div>
-          </div>
-          <div class="card-action">
-            <a href="https://track.coolaffs.com/visit/?bta=37155&nci=5416&Afp10=Seo" class="play-btn" target="_blank" rel="nofollow">Claim Bonus</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="features">
-        <div class="feat">
-          <span class="feat-icon">🛡️</span>
-          <h4>Trusted Brands</h4>
-          <p>Reviewed and rated for safe, fair play</p>
-        </div>
-        <div class="feat">
-          <span class="feat-icon">🎁</span>
-          <h4>Fresh Promotions</h4>
-          <p>Stay updated on the most rewarding deals</p>
-        </div>
-        <div class="feat">
-          <span class="feat-icon">🚀</span>
-          <h4>Fast Access</h4>
-          <p>Quickly compare offers and claim rewards</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="wrap">
-      <div><strong>LuckyBonus</strong>.pro + Top Online Casino Offers</div>
-      <div class="footer-note">
-        18+ only. Gambling can be addictive — please play responsibly.<br>
-        LuckyBonus.pro may receive affiliate commissions. T&amp;Cs apply.
-      </div>
-    </div>
-  </footer>
-
+    <footer class="py-10 text-center text-slate-600 text-sm border-t border-slate-800">
+        &copy; 2026 LuckyBonus.pro. All rights reserved.
+    </footer>
 </body>
 </html>
